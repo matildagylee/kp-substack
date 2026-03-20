@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Conscious Edit - Icon Concepts</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #242424;
+    }
+
+    .header {
+      text-align: center;
+      padding: 56px 40px 16px;
+    }
+    .header h1 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #bbb;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .concept {
+      text-align: center;
+      padding: 48px 24px 36px;
+      border: 1px solid #f0f0f0;
+      border-radius: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .concept:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    }
+
+    .icon-area {
+      margin-bottom: 24px;
+    }
+    .icon-area svg {
+      width: 72px;
+      height: 72px;
+    }
+
+    .concept-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+    .concept-name em {
+      font-style: italic;
+      font-weight: 300;
+      color: #2b6b4f;
+    }
+
+    .concept-desc {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #bbb;
+      margin-top: 20px;
+    }
+
+    /* Dark preview row */
+    .dark-row {
+      max-width: 1000px;
+      margin: 16px auto 0;
+      padding: 0 40px 60px;
+    }
+    .dark-row h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ccc;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .dark-strip {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 48px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .dark-concept {
+      text-align: center;
+    }
+    .dark-concept svg {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+    }
+    .dark-concept .concept-name {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    /* Substack preview */
+    .substack-mock {
+      max-width: 500px;
+      margin: 0 auto 60px;
+      padding: 0 40px;
+    }
+    .substack-mock h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ccc;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .mock-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+    }
+    .mock-card svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 20px;
+    }
+    .mock-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .mock-tagline {
+      font-size: 15px;
+      color: #999;
+    }
+    .mock-sub-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #2b6b4f;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 28px;
+      border-radius: 20px;
+      border: none;
+    }
+
+    @media (max-width: 700px) {
+      .grid, .dark-strip { grid-template-columns: 1fr; }
+      .grid { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Icon Concepts</h1>
+    <p>Standalone illustrated icons - sits above the name like Scroll Sick's rose. Fresh, not retro.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1: The Magnifying Glass + Leaf -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- magnifying glass -->
+          <circle cx="30" cy="30" r="16" stroke="#2b6b4f" stroke-width="2.5"/>
+          <line x1="42" y1="42" x2="56" y2="56" stroke="#2b6b4f" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- leaf inside glass -->
+          <path d="M24 34c0-8 6-14 14-18-2 6-3 12-6 15s-6 4-8 3z" fill="#7ab89a" opacity="0.7"/>
+          <path d="M24 34c0-8 6-14 14-18" stroke="#2b6b4f" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Investigator</div>
+    </div>
+
+    <!-- 2: Scissors cutting a tag -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- tag -->
+          <rect x="28" y="8" width="28" height="40" rx="3" stroke="#2b6b4f" stroke-width="2" fill="#f0f7f3"/>
+          <circle cx="42" cy="18" r="3" stroke="#2b6b4f" stroke-width="1.5"/>
+          <line x1="34" y1="28" x2="50" y2="28" stroke="#ccc" stroke-width="1.5"/>
+          <line x1="34" y1="34" x2="46" y2="34" stroke="#ccc" stroke-width="1.5"/>
+          <line x1="34" y1="40" x2="42" y2="40" stroke="#ccc" stroke-width="1.5"/>
+          <!-- scissors -->
+          <circle cx="16" cy="50" r="6" stroke="#2b6b4f" stroke-width="2"/>
+          <circle cx="16" cy="64" r="6" stroke="#2b6b4f" stroke-width="2"/>
+          <line x1="21" y1="47" x2="36" y2="32" stroke="#2b6b4f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="21" y1="67" x2="36" y2="42" stroke="#2b6b4f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Editor</div>
+    </div>
+
+    <!-- 3: Hand-drawn circle / edit mark -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- organic hand-drawn circle -->
+          <path d="M36 8c16 0 28 10 28 26s-10 28-26 30C22 66 8 56 8 38S18 8 36 8z" stroke="#2b6b4f" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-dasharray="0" opacity="0.85"/>
+          <!-- checkmark inside -->
+          <polyline points="24,38 32,46 48,28" stroke="#2b6b4f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Stamp of Approval</div>
+    </div>
+
+    <!-- 4: Peeling label -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- label/sticker base -->
+          <rect x="12" y="16" width="48" height="40" rx="4" fill="#f8f6f2" stroke="#e0dbd3" stroke-width="1.5"/>
+          <!-- text lines on label -->
+          <line x1="20" y1="28" x2="52" y2="28" stroke="#ddd" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="36" x2="44" y2="36" stroke="#ddd" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="44" x2="36" y2="44" stroke="#ddd" stroke-width="2" stroke-linecap="round"/>
+          <!-- peeling corner -->
+          <path d="M60 16L60 32C60 32 52 32 48 36C44 40 44 48 44 48L60 48L60 16Z" fill="#fff" stroke="#2b6b4f" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M60 16C56 20 48 28 44 36" stroke="#2b6b4f" stroke-width="1.5" fill="none"/>
+          <!-- eye peeking underneath -->
+          <ellipse cx="52" cy="40" rx="5" ry="3.5" stroke="#2b6b4f" stroke-width="1.5"/>
+          <circle cx="52" cy="40" r="1.5" fill="#2b6b4f"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Label Peeler</div>
+    </div>
+
+    <!-- 5: Shopping bag with magnifying glass -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- shopping bag -->
+          <path d="M16 24h40l-4 40H20L16 24z" stroke="#2b6b4f" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+          <!-- handles -->
+          <path d="M26 24c0-8 4-14 10-14s10 6 10 14" stroke="#2b6b4f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <!-- magnifying glass overlay -->
+          <circle cx="44" cy="46" r="10" fill="#fff" stroke="#2b6b4f" stroke-width="2"/>
+          <line x1="51" y1="53" x2="58" y2="60" stroke="#2b6b4f" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- checkmark in glass -->
+          <polyline points="39,46 43,50 50,42" stroke="#7ab89a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Conscious Shopper</div>
+    </div>
+
+    <!-- 6: Pencil with leaf tip -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- pencil body at angle -->
+          <rect x="28" y="4" width="10" height="44" rx="2" transform="rotate(15 33 26)" stroke="#2b6b4f" stroke-width="2" fill="#f8f6f2"/>
+          <!-- pencil band -->
+          <rect x="28" y="38" width="10" height="6" rx="0" transform="rotate(15 33 41)" fill="#2b6b4f" opacity="0.3"/>
+          <!-- leaf tip instead of point -->
+          <path d="M26 52c2-4 6-6 10-4-1 4-4 8-8 10-2-1-3-3-2-6z" fill="#7ab89a"/>
+          <path d="M26 52c2-4 6-6 10-4" stroke="#2b6b4f" stroke-width="1.2" fill="none"/>
+          <!-- small editing marks -->
+          <path d="M48 20l6-2M50 28l5 1M46 36l6 2" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Green Pen</div>
+    </div>
+
+    <!-- 7: Open book with sprouting leaf -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- open book -->
+          <path d="M8 52V18c8-4 18-4 28 0" stroke="#2b6b4f" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M64 52V18c-8-4-18-4-28 0" stroke="#2b6b4f" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <line x1="36" y1="18" x2="36" y2="52" stroke="#2b6b4f" stroke-width="1.5"/>
+          <!-- pages base -->
+          <path d="M8 52c8-3 18-3 28 0c10-3 20-3 28 0" stroke="#2b6b4f" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- sprouting plant from spine -->
+          <path d="M36 18c0-6-4-10-8-12 4 1 8 4 8 8" stroke="#7ab89a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M36 14c0-6 4-10 8-12-4 1-8 4-8 8" stroke="#7ab89a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M36 18V6" stroke="#2b6b4f" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- text lines -->
+          <line x1="14" y1="28" x2="30" y2="26" stroke="#e0dbd3" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="14" y1="36" x2="30" y2="34" stroke="#e0dbd3" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="42" y1="26" x2="58" y2="28" stroke="#e0dbd3" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="42" y1="34" x2="58" y2="36" stroke="#e0dbd3" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Field Guide</div>
+    </div>
+
+    <!-- 8: Eye with leaf iris -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- eye outline -->
+          <path d="M6 36s12-20 30-20 30 20 30 20-12 20-30 20S6 36 6 36z" stroke="#2b6b4f" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- iris -->
+          <circle cx="36" cy="36" r="12" fill="#f0f7f3" stroke="#2b6b4f" stroke-width="2"/>
+          <!-- leaf as pupil -->
+          <path d="M30 38c0-6 4-10 10-14-1.5 4.5-2 8.5-4.5 11s-4 3.5-5.5 3z" fill="#2b6b4f"/>
+          <path d="M30 38c0-6 4-10 10-14" stroke="#1a4a36" stroke-width="0.8" fill="none"/>
+          <!-- light reflection -->
+          <circle cx="40" cy="32" r="2" fill="#fff" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Open Eye</div>
+    </div>
+
+    <!-- 9: Tote bag outline simple -->
+    <div class="concept">
+      <div class="icon-area">
+        <svg viewBox="0 0 72 72" fill="none">
+          <!-- simple tote bag -->
+          <path d="M14 28h44v34a4 4 0 01-4 4H18a4 4 0 01-4-4V28z" stroke="#2b6b4f" stroke-width="2.5" fill="none"/>
+          <!-- handles -->
+          <path d="M24 28c0-10 5-18 12-18s12 8 12 18" stroke="#2b6b4f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <!-- simple leaf/sprout coming out of top -->
+          <path d="M36 28v-6" stroke="#7ab89a" stroke-width="2" stroke-linecap="round"/>
+          <path d="M36 22c-3-3-7-3-9-1 3 0 6 1 9 4" fill="#7ab89a" stroke="none"/>
+          <path d="M36 22c3-3 7-3 9-1-3 0-6 1-9 4" fill="#2b6b4f" opacity="0.5" stroke="none"/>
+        </svg>
+      </div>
+      <div class="concept-name">The Conscious <em>Edit</em></div>
+      <div class="concept-desc">The Better Bag</div>
+    </div>
+
+  </div>
+
+  <!-- Dark preview -->
+  <div class="dark-row">
+    <h2>On Dark</h2>
+    <div class="dark-strip">
+
+      <div class="dark-concept">
+        <svg viewBox="0 0 72 72" fill="none">
+          <path d="M36 8c16 0 28 10 28 26s-10 28-26 30C22 66 8 56 8 38S18 8 36 8z" stroke="#7ab89a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <polyline points="24,38 32,46 48,28" stroke="#7ab89a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="concept-name">The Conscious <em>Edit</em></div>
+      </div>
+
+      <div class="dark-concept">
+        <svg viewBox="0 0 72 72" fill="none">
+          <path d="M6 36s12-20 30-20 30 20 30 20-12 20-30 20S6 36 6 36z" stroke="#7ab89a" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="36" cy="36" r="12" fill="none" stroke="#7ab89a" stroke-width="2"/>
+          <path d="M30 38c0-6 4-10 10-14-1.5 4.5-2 8.5-4.5 11s-4 3.5-5.5 3z" fill="#7ab89a"/>
+          <circle cx="40" cy="32" r="2" fill="#fff" opacity="0.3"/>
+        </svg>
+        <div class="concept-name">The Conscious <em>Edit</em></div>
+      </div>
+
+      <div class="dark-concept">
+        <svg viewBox="0 0 72 72" fill="none">
+          <path d="M14 28h44v34a4 4 0 01-4 4H18a4 4 0 01-4-4V28z" stroke="#7ab89a" stroke-width="2.5" fill="none"/>
+          <path d="M24 28c0-10 5-18 12-18s12 8 12 18" stroke="#7ab89a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M36 28v-6" stroke="#7ab89a" stroke-width="2" stroke-linecap="round"/>
+          <path d="M36 22c-3-3-7-3-9-1 3 0 6 1 9 4" fill="#7ab89a"/>
+          <path d="M36 22c3-3 7-3 9-1-3 0-6 1-9 4" fill="#fff" opacity="0.3"/>
+        </svg>
+        <div class="concept-name">The Conscious <em>Edit</em></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Substack profile mock -->
+  <div class="substack-mock">
+    <h2>As Substack Profile</h2>
+    <div class="mock-card">
+      <svg viewBox="0 0 72 72" fill="none" width="64" height="64">
+        <path d="M6 36s12-20 30-20 30 20 30 20-12 20-30 20S6 36 6 36z" stroke="#2b6b4f" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="36" cy="36" r="12" fill="#f0f7f3" stroke="#2b6b4f" stroke-width="2"/>
+        <path d="M30 38c0-6 4-10 10-14-1.5 4.5-2 8.5-4.5 11s-4 3.5-5.5 3z" fill="#2b6b4f"/>
+        <circle cx="40" cy="32" r="2" fill="#fff" opacity="0.8"/>
+      </svg>
+      <div class="mock-title">The Conscious Edit</div>
+      <div class="mock-tagline">The homework you don't have time to do.</div>
+      <button class="mock-sub-btn">Subscribe</button>
+    </div>
+  </div>
+
+  <!-- Feedback -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4KxFW02WX8FRCiMqWFTlsLDwyUvUn7_fObmkqTYmfxWpE8Q/viewform" target="_blank" rel="noopener" style="position:fixed;bottom:24px;right:24px;background:#2b6b4f;color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;padding:12px 24px;border-radius:24px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.15);z-index:9999;">Give Feedback</a>
+
+</body>
+</html>
