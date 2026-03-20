@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Conscious Edit - Logo Options</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,300;1,8..60,400&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5f4f1;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #242424;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 64px 40px 48px;
+    }
+    .page-header h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .page-header p {
+      font-size: 15px;
+      color: #999;
+    }
+
+    .options-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .option {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      background: #fff;
+    }
+    .option-label {
+      padding: 20px 28px;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .option-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #242424;
+    }
+    .option-style {
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* Preview areas */
+    .preview-dark {
+      background: #1a1a1a;
+      padding: 56px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+    }
+    .preview-light {
+      background: #fff;
+      padding: 56px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .preview-cream {
+      background: #f8f6f1;
+      padding: 48px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+    }
+
+    /* Monogram strip */
+    .mono-strip {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding: 24px;
+      background: #fafaf8;
+      border-top: 1px solid #f0f0f0;
+    }
+    .mono {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    /* ═══ Option A: Editorial Serif ═══ */
+    .logo-a {
+      text-align: center;
+    }
+    .logo-a .the {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: #7ab89a;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .logo-a .main {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .logo-a .main-white { color: #fff; }
+    .logo-a .main-dark { color: #1a1a1a; }
+    .logo-a .edit {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 3px;
+    }
+    .logo-a .edit-green { color: #7ab89a; }
+    .logo-a .edit-dark-green { color: #2b6b4f; }
+    .logo-a .line {
+      width: 40px;
+      height: 1px;
+      background: #7ab89a;
+      margin: 12px auto 0;
+    }
+
+    /* ═══ Option B: Stacked Minimal ═══ */
+    .logo-b {
+      text-align: center;
+    }
+    .logo-b .conscious {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .logo-b .conscious-light { color: #888; }
+    .logo-b .conscious-dark { color: #666; }
+    .logo-b .edit-word {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 56px;
+      font-style: italic;
+      line-height: 1;
+    }
+    .logo-b .edit-white { color: #fff; }
+    .logo-b .edit-dark { color: #1a1a1a; }
+    .logo-b .the-word {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .logo-b .the-light { color: #555; }
+    .logo-b .the-dark { color: #999; }
+
+    /* ═══ Option C: Side-by-side Modern ═══ */
+    .logo-c {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-c .mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-c .mark-green {
+      background: #2b6b4f;
+    }
+    .logo-c .mark-dark {
+      background: #1a1a1a;
+    }
+    .logo-c .mark svg {
+      width: 24px;
+      height: 24px;
+    }
+    .logo-c .text-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .logo-c .line1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+    .logo-c .line1-light { color: #888; }
+    .logo-c .line1-dark { color: #666; }
+    .logo-c .line2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .logo-c .line2-white { color: #fff; }
+    .logo-c .line2-dark { color: #1a1a1a; }
+    .logo-c .line2 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* ═══ Option D: Refined Wordmark ═══ */
+    .logo-d {
+      text-align: center;
+    }
+    .logo-d .wordmark {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .logo-d .wordmark-white { color: #fff; }
+    .logo-d .wordmark-dark { color: #1a1a1a; }
+    .logo-d .wordmark em {
+      font-style: italic;
+    }
+    .logo-d .separator {
+      display: inline-block;
+      width: 1px;
+      height: 24px;
+      margin: 0 14px;
+      vertical-align: middle;
+    }
+    .logo-d .separator-light { background: #444; }
+    .logo-d .separator-dark { background: #ddd; }
+    .logo-d .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 14px;
+      display: block;
+    }
+    .logo-d .tagline-light { color: #666; }
+    .logo-d .tagline-dark { color: #999; }
+
+    /* ═══ Option E: Capsule Monogram ═══ */
+    .logo-e {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo-e .capsule {
+      width: 56px;
+      height: 72px;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-e .capsule-outline-light {
+      border: 1.5px solid #fff;
+    }
+    .logo-e .capsule-outline-dark {
+      border: 1.5px solid #1a1a1a;
+    }
+    .logo-e .capsule-letters {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .logo-e .capsule-letters-white { color: #fff; }
+    .logo-e .capsule-letters-dark { color: #1a1a1a; }
+    .logo-e .name-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .logo-e .name-top {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    .logo-e .name-top-light { color: #888; }
+    .logo-e .name-top-dark { color: #999; }
+    .logo-e .name-bottom {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+    .logo-e .name-bottom-white { color: #fff; }
+    .logo-e .name-bottom-dark { color: #1a1a1a; }
+
+    /* ═══ Option F: The Slash ═══ */
+    .logo-f {
+      text-align: center;
+    }
+    .logo-f .logotype {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .logo-f .logotype-white { color: #fff; }
+    .logo-f .logotype-dark { color: #1a1a1a; }
+    .logo-f .slash {
+      font-weight: 200;
+      margin: 0 4px;
+    }
+    .logo-f .slash-green { color: #2b6b4f; }
+    .logo-f .accent {
+      font-weight: 700;
+    }
+    .logo-f .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      display: block;
+      margin-top: 8px;
+    }
+    .logo-f .sub-light { color: #555; }
+    .logo-f .sub-dark { color: #aaa; }
+
+    /* Full-width option */
+    .option-full {
+      grid-column: 1 / -1;
+    }
+    .previews-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .previews-row > div {
+      padding: 56px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+    }
+
+    /* Vote strip */
+    .vote-strip {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      text-align: center;
+    }
+    .vote-strip p {
+      font-size: 15px;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .vote-strip a {
+      display: inline-block;
+      background: #2b6b4f;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .vote-strip a:hover { background: #22563f; }
+
+    @media (max-width: 700px) {
+      .options-grid { grid-template-columns: 1fr; padding: 0 20px 60px; }
+      .option-full { grid-column: auto; }
+      .previews-row { grid-template-columns: 1fr; }
+      .logo-a .main, .logo-a .edit { font-size: 36px; }
+      .logo-b .edit-word { font-size: 42px; }
+      .logo-d .wordmark { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Logo Options</h1>
+    <p>The Conscious Edit - 6 directions. Pick a favourite or mix elements.</p>
+  </div>
+
+  <div class="options-grid">
+
+    <!-- ═══ OPTION A ═══ -->
+    <div class="option">
+      <div class="option-label">
+        <div class="option-name">Option A</div>
+        <div class="option-style">Editorial Serif</div>
+      </div>
+      <div class="preview-dark">
+        <div class="logo-a">
+          <span class="the">The</span>
+          <span class="main main-white">Conscious</span>
+          <span class="edit edit-green">Edit</span>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="preview-light">
+        <div class="logo-a">
+          <span class="the">The</span>
+          <span class="main main-dark">Conscious</span>
+          <span class="edit edit-dark-green">Edit</span>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="mono-strip">
+        <div class="mono" style="background:#2b6b4f;color:#fff;font-family:'Cormorant Garamond';font-size:18px;letter-spacing:2px;">CE</div>
+        <div class="mono" style="background:#1a1a1a;color:#fff;font-family:'Cormorant Garamond';font-size:18px;letter-spacing:2px;">CE</div>
+        <div class="mono" style="background:#fff;color:#2b6b4f;border:1.5px solid #2b6b4f;font-family:'Cormorant Garamond';font-size:18px;letter-spacing:2px;">CE</div>
+      </div>
+    </div>
+
+    <!-- ═══ OPTION B ═══ -->
+    <div class="option">
+      <div class="option-label">
+        <div class="option-name">Option B</div>
+        <div class="option-style">Stacked Statement</div>
+      </div>
+      <div class="preview-dark">
+        <div class="logo-b">
+          <span class="the-word the-light">The Conscious</span>
+          <span class="edit-word edit-white">Edit</span>
+        </div>
+      </div>
+      <div class="preview-light">
+        <div class="logo-b">
+          <span class="the-word the-dark">The Conscious</span>
+          <span class="edit-word edit-dark">Edit</span>
+        </div>
+      </div>
+      <div class="mono-strip">
+        <div class="mono" style="background:#1a1a1a;color:#fff;font-family:'DM Serif Display';font-style:italic;font-size:20px;">E</div>
+        <div class="mono" style="background:#2b6b4f;color:#fff;font-family:'DM Serif Display';font-style:italic;font-size:20px;">E</div>
+        <div class="mono" style="background:#f5f2ec;color:#1a1a1a;font-family:'DM Serif Display';font-style:italic;font-size:20px;">E</div>
+      </div>
+    </div>
+
+    <!-- ═══ OPTION C ═══ -->
+    <div class="option">
+      <div class="option-label">
+        <div class="option-name">Option C</div>
+        <div class="option-style">Icon + Wordmark</div>
+      </div>
+      <div class="preview-dark">
+        <div class="logo-c">
+          <div class="mark mark-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"/>
+              <path d="M12 3c2.21 0 4 4.03 4 9s-1.79 9-4 9"/>
+              <path d="M12 3c-2.21 0-4 4.03-4 9s1.79 9 4 9"/>
+              <line x1="3.5" y1="9" x2="20.5" y2="9"/>
+              <line x1="3.5" y1="15" x2="20.5" y2="15"/>
+            </svg>
+          </div>
+          <div class="text-stack">
+            <span class="line1 line1-light">The Conscious</span>
+            <span class="line2 line2-white"><em>Edit</em></span>
+          </div>
+        </div>
+      </div>
+      <div class="preview-light">
+        <div class="logo-c">
+          <div class="mark mark-dark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"/>
+              <path d="M12 3c2.21 0 4 4.03 4 9s-1.79 9-4 9"/>
+              <path d="M12 3c-2.21 0-4 4.03-4 9s1.79 9 4 9"/>
+              <line x1="3.5" y1="9" x2="20.5" y2="9"/>
+              <line x1="3.5" y1="15" x2="20.5" y2="15"/>
+            </svg>
+          </div>
+          <div class="text-stack">
+            <span class="line1 line1-dark">The Conscious</span>
+            <span class="line2 line2-dark"><em>Edit</em></span>
+          </div>
+        </div>
+      </div>
+      <div class="mono-strip">
+        <div class="mono" style="background:#2b6b4f;border-radius:12px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"/><path d="M12 3c2.21 0 4 4.03 4 9s-1.79 9-4 9"/><path d="M12 3c-2.21 0-4 4.03-4 9s1.79 9 4 9"/><line x1="3.5" y1="9" x2="20.5" y2="9"/><line x1="3.5" y1="15" x2="20.5" y2="15"/></svg></div>
+        <div class="mono" style="background:#1a1a1a;border-radius:12px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"/><path d="M12 3c2.21 0 4 4.03 4 9s-1.79 9-4 9"/><path d="M12 3c-2.21 0-4 4.03-4 9s1.79 9 4 9"/><line x1="3.5" y1="9" x2="20.5" y2="9"/><line x1="3.5" y1="15" x2="20.5" y2="15"/></svg></div>
+        <div class="mono" style="background:#fff;border:1.5px solid #e5e5e5;border-radius:12px;"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"/><path d="M12 3c2.21 0 4 4.03 4 9s-1.79 9-4 9"/><path d="M12 3c-2.21 0-4 4.03-4 9s1.79 9 4 9"/><line x1="3.5" y1="9" x2="20.5" y2="9"/><line x1="3.5" y1="15" x2="20.5" y2="15"/></svg></div>
+      </div>
+    </div>
+
+    <!-- ═══ OPTION D ═══ -->
+    <div class="option">
+      <div class="option-label">
+        <div class="option-name">Option D</div>
+        <div class="option-style">Classic Wordmark</div>
+      </div>
+      <div class="preview-dark">
+        <div class="logo-d">
+          <span class="wordmark wordmark-white">The Conscious<span class="separator separator-light"></span><em>Edit</em></span>
+          <span class="tagline tagline-light">The homework you don't have time to do</span>
+        </div>
+      </div>
+      <div class="preview-light">
+        <div class="logo-d">
+          <span class="wordmark wordmark-dark">The Conscious<span class="separator separator-dark"></span><em>Edit</em></span>
+          <span class="tagline tagline-dark">The homework you don't have time to do</span>
+        </div>
+      </div>
+      <div class="mono-strip">
+        <div class="mono" style="background:#1a1a1a;color:#fff;font-family:'Libre Baskerville';font-style:italic;font-size:17px;">ce</div>
+        <div class="mono" style="background:#fff;color:#1a1a1a;border:1.5px solid #e0e0e0;font-family:'Libre Baskerville';font-style:italic;font-size:17px;">ce</div>
+        <div class="mono" style="background:#f5f2ec;color:#2b6b4f;font-family:'Libre Baskerville';font-style:italic;font-size:17px;">ce</div>
+      </div>
+    </div>
+
+    <!-- ═══ OPTION E ═══ -->
+    <div class="option">
+      <div class="option-label">
+        <div class="option-name">Option E</div>
+        <div class="option-style">Capsule Monogram</div>
+      </div>
+      <div class="preview-dark">
+        <div class="logo-e">
+          <div class="capsule capsule-outline-light">
+            <span class="capsule-letters capsule-letters-white">ce</span>
+          </div>
+          <div class="name-stack">
+            <span class="name-top name-top-light">The Conscious</span>
+            <span class="name-bottom name-bottom-white">Edit</span>
+          </div>
+        </div>
+      </div>
+      <div class="preview-light">
+        <div class="logo-e">
+          <div class="capsule capsule-outline-dark">
+            <span class="capsule-letters capsule-letters-dark">ce</span>
+          </div>
+          <div class="name-stack">
+            <span class="name-top name-top-dark">The Conscious</span>
+            <span class="name-bottom name-bottom-dark">Edit</span>
+          </div>
+        </div>
+      </div>
+      <div class="mono-strip">
+        <div class="mono" style="background:transparent;border:1.5px solid #2b6b4f;color:#2b6b4f;font-family:'Cormorant Garamond';font-size:17px;border-radius:22px;width:36px;height:46px;">ce</div>
+        <div class="mono" style="background:transparent;border:1.5px solid #1a1a1a;color:#1a1a1a;font-family:'Cormorant Garamond';font-size:17px;border-radius:22px;width:36px;height:46px;">ce</div>
+        <div class="mono" style="background:#1a1a1a;border:1.5px solid #1a1a1a;color:#fff;font-family:'Cormorant Garamond';font-size:17px;border-radius:22px;width:36px;height:46px;">ce</div>
+      </div>
+    </div>
+
+    <!-- ═══ OPTION F ═══ -->
+    <div class="option">
+      <div class="option-label">
+        <div class="option-name">Option F</div>
+        <div class="option-style">Clean Sans / The Slash</div>
+      </div>
+      <div class="preview-dark">
+        <div class="logo-f">
+          <span class="logotype logotype-white">Conscious<span class="slash slash-green">/</span><span class="accent">Edit</span></span>
+          <span class="sub sub-light">by Kristina P.</span>
+        </div>
+      </div>
+      <div class="preview-light">
+        <div class="logo-f">
+          <span class="logotype logotype-dark">Conscious<span class="slash slash-green">/</span><span class="accent">Edit</span></span>
+          <span class="sub sub-dark">by Kristina P.</span>
+        </div>
+      </div>
+      <div class="mono-strip">
+        <div class="mono" style="background:#1a1a1a;color:#fff;font-family:'Inter';font-weight:300;font-size:15px;">c<span style="color:#7ab89a;font-weight:200">/</span>e</div>
+        <div class="mono" style="background:#fff;color:#1a1a1a;border:1.5px solid #e0e0e0;font-family:'Inter';font-weight:300;font-size:15px;">c<span style="color:#2b6b4f;font-weight:200">/</span>e</div>
+        <div class="mono" style="background:#2b6b4f;color:#fff;font-family:'Inter';font-weight:300;font-size:15px;">c<span style="color:#c8e0d3;font-weight:200">/</span>e</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="vote-strip">
+    <p>Pick your favourite(s) and leave feedback.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4KxFW02WX8FRCiMqWFTlsLDwyUvUn7_fObmkqTYmfxWpE8Q/viewform" target="_blank">Give Feedback</a>
+  </div>
+
+  <!-- Feedback button -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4KxFW02WX8FRCiMqWFTlsLDwyUvUn7_fObmkqTYmfxWpE8Q/viewform" target="_blank" rel="noopener" style="position:fixed;bottom:24px;right:24px;background:#2b6b4f;color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;padding:12px 24px;border-radius:24px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.15);z-index:9999;transition:background 0.15s;" onmouseover="this.style.background='#22563f'" onmouseout="this.style.background='#2b6b4f'">Give Feedback</a>
+
+</body>
+</html>
