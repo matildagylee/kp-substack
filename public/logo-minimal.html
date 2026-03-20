@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Conscious Edit - Minimal Logos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      text-align: center;
+      padding: 56px 40px 48px;
+    }
+    .header h1 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .row {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 32px;
+      border-radius: 12px;
+    }
+    .cell-light { background: #fafaf8; }
+    .cell-dark { background: #1a1a1a; }
+
+    .label-row {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .label-cell {
+      text-align: center;
+    }
+    .label-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 2px;
+    }
+    .label-desc {
+      font-size: 12px;
+      color: #bbb;
+    }
+
+    /* ═══ A: Just the initials, nothing else ═══ */
+    .logo-a {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 6px;
+    }
+    .logo-a-dark { color: #fff; }
+    .logo-a-light { color: #1a1a1a; }
+
+    /* ═══ B: Single letter ═══ */
+    .logo-b {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 64px;
+      font-style: italic;
+      line-height: 1;
+    }
+    .logo-b-dark { color: #fff; }
+    .logo-b-light { color: #1a1a1a; }
+
+    /* ═══ C: Dot accent ═══ */
+    .logo-c {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-c span {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    .logo-c-dark span { color: #fff; }
+    .logo-c-light span { color: #1a1a1a; }
+    .logo-c .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2b6b4f;
+      flex-shrink: 0;
+    }
+
+    /* ═══ D: Underline ═══ */
+    .logo-d {
+      text-align: center;
+    }
+    .logo-d .text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .logo-d-dark .text { color: #fff; }
+    .logo-d-light .text { color: #1a1a1a; }
+    .logo-d .text em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    .logo-d .bar {
+      width: 24px;
+      height: 2px;
+      margin: 8px auto 0;
+      background: #2b6b4f;
+    }
+
+    /* ═══ E: Brackets ═══ */
+    .logo-e {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .logo-e-dark { color: #fff; }
+    .logo-e-light { color: #1a1a1a; }
+    .logo-e .bracket {
+      font-weight: 300;
+      color: #2b6b4f;
+      font-size: 20px;
+    }
+
+    /* ═══ F: Stacked tight ═══ */
+    .logo-f {
+      text-align: center;
+      line-height: 1;
+    }
+    .logo-f .top {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .logo-f-dark .top { color: #666; }
+    .logo-f-light .top { color: #aaa; }
+    .logo-f .bottom {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 44px;
+      font-style: italic;
+      display: block;
+    }
+    .logo-f-dark .bottom { color: #fff; }
+    .logo-f-light .bottom { color: #1a1a1a; }
+
+    /* ═══ G: Circle monogram ═══ */
+    .logo-g {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-g-outline-light {
+      border: 1.5px solid #1a1a1a;
+    }
+    .logo-g-outline-dark {
+      border: 1.5px solid #fff;
+    }
+    .logo-g-filled {
+      background: #2b6b4f;
+    }
+    .logo-g span {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    /* ═══ H: Period after edit ═══ */
+    .logo-h {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+      font-weight: 400;
+    }
+    .logo-h-dark { color: #fff; }
+    .logo-h-light { color: #1a1a1a; }
+    .logo-h em {
+      font-style: italic;
+    }
+    .logo-h .period {
+      color: #2b6b4f;
+      font-weight: 700;
+    }
+
+    /* ═══ I: Slash ═══ */
+    .logo-i {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    .logo-i-dark { color: #fff; }
+    .logo-i-light { color: #1a1a1a; }
+    .logo-i .slash {
+      color: #2b6b4f;
+      font-weight: 200;
+      margin: 0 2px;
+    }
+
+    /* Substack mock */
+    .mock-section {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 40px 64px;
+    }
+    .mock-section h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ccc;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .mock-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .mock-item {
+      text-align: center;
+      padding: 24px 16px;
+      border: 1px solid #f0f0f0;
+      border-radius: 12px;
+    }
+    .mock-item .mock-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mock-item .mock-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    .mock-item .mock-tag {
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    @media (max-width: 700px) {
+      .row, .label-row { grid-template-columns: 1fr; }
+      .mock-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Minimal Logos</h1>
+    <p>Stripped back. Just type, maybe one accent.</p>
+  </div>
+
+  <!-- Row 1 -->
+  <div class="row">
+    <div class="cell cell-light">
+      <div class="logo-a logo-a-light">ce</div>
+    </div>
+    <div class="cell cell-dark">
+      <div class="logo-b logo-b-dark">E</div>
+    </div>
+    <div class="cell cell-light">
+      <div class="logo-c logo-c-light">
+        <div class="dot"></div>
+        <span>ce</span>
+      </div>
+    </div>
+  </div>
+  <div class="label-row">
+    <div class="label-cell">
+      <div class="label-name">A: Lowercase Serif</div>
+      <div class="label-desc">Cormorant Garamond 300</div>
+    </div>
+    <div class="label-cell">
+      <div class="label-name">B: Single Letter</div>
+      <div class="label-desc">DM Serif Display italic</div>
+    </div>
+    <div class="label-cell">
+      <div class="label-name">C: Dot + Sans</div>
+      <div class="label-desc">Inter 600 + green dot</div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="cell cell-dark">
+      <div class="logo-d logo-d-dark">
+        <span class="text">conscious <em>edit</em></span>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <div class="cell cell-light">
+      <div class="logo-e logo-e-light">
+        <span class="bracket">[</span> ce <span class="bracket">]</span>
+      </div>
+    </div>
+    <div class="cell cell-dark">
+      <div class="logo-f logo-f-dark">
+        <span class="top">the conscious</span>
+        <span class="bottom">Edit</span>
+      </div>
+    </div>
+  </div>
+  <div class="label-row">
+    <div class="label-cell">
+      <div class="label-name">D: Underline</div>
+      <div class="label-desc">Serif wordmark + green bar</div>
+    </div>
+    <div class="label-cell">
+      <div class="label-name">E: Brackets</div>
+      <div class="label-desc">Editorial notation style</div>
+    </div>
+    <div class="label-cell">
+      <div class="label-name">F: Stacked</div>
+      <div class="label-desc">Big italic "Edit" hero</div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="row">
+    <div class="cell cell-light">
+      <div class="logo-g logo-g-outline-light">
+        <span style="color:#1a1a1a;">ce</span>
+      </div>
+    </div>
+    <div class="cell cell-dark">
+      <div class="logo-h logo-h-dark">the conscious <em>edit</em><span class="period">.</span></div>
+    </div>
+    <div class="cell cell-light">
+      <div class="logo-i logo-i-light">conscious<span class="slash">/</span>edit</div>
+    </div>
+  </div>
+  <div class="label-row">
+    <div class="label-cell">
+      <div class="label-name">G: Circle Mark</div>
+      <div class="label-desc">Thin circle + italic initials</div>
+    </div>
+    <div class="label-cell">
+      <div class="label-name">H: The Period</div>
+      <div class="label-desc">Full name + green period</div>
+    </div>
+    <div class="label-cell">
+      <div class="label-name">I: The Slash</div>
+      <div class="label-desc">Clean sans + green divider</div>
+    </div>
+  </div>
+
+  <!-- Avatars preview -->
+  <div class="mock-section">
+    <h2>As Substack Avatar</h2>
+    <div class="mock-row">
+      <div class="mock-item">
+        <div class="mock-avatar" style="background:#1a1a1a;">
+          <span style="font-family:'Cormorant Garamond';font-size:22px;font-weight:300;color:#fff;letter-spacing:4px;font-style:italic;">ce</span>
+        </div>
+        <div class="mock-name">Option A</div>
+        <div class="mock-tag">Serif initials</div>
+      </div>
+      <div class="mock-item">
+        <div class="mock-avatar" style="background:#2b6b4f;">
+          <span style="font-family:'DM Serif Display';font-size:28px;color:#fff;font-style:italic;">E</span>
+        </div>
+        <div class="mock-name">Option B</div>
+        <div class="mock-tag">Single letter</div>
+      </div>
+      <div class="mock-item">
+        <div class="mock-avatar" style="background:#fff;border:1.5px solid #1a1a1a;">
+          <span style="font-family:'Cormorant Garamond';font-size:22px;font-weight:400;color:#1a1a1a;letter-spacing:3px;font-style:italic;">ce</span>
+        </div>
+        <div class="mock-name">Option G</div>
+        <div class="mock-tag">Circle outline</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4KxFW02WX8FRCiMqWFTlsLDwyUvUn7_fObmkqTYmfxWpE8Q/viewform" target="_blank" rel="noopener" style="position:fixed;bottom:24px;right:24px;background:#2b6b4f;color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;padding:12px 24px;border-radius:24px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.15);z-index:9999;">Give Feedback</a>
+
+</body>
+</html>
