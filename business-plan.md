@@ -16,8 +16,8 @@
 A weekly newsletter for women who *want* to make better choices about what they consume - fashion, beauty, food - but don't know where to start and don't have unlimited budgets.
 
 ### What this is NOT
-- Not an eco-warrior guilt trip
-- Not sponsored content disguised as advice
+- Not an academic or research publication - it's personal experience, not journalism
+- Not sponsored content (today) - but sponsorships and brand partnerships are a future monetization path, done transparently and on Kristina's terms
 - Could evolve into a destination for women who already identify as eco-conscious
 
 ### Core reader (who we're writing for)
