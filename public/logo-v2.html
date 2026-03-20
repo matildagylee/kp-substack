@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Conscious Edit - Brand Concepts</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,700;1,6..96,900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #ddd9d1;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-title {
+      text-align: center;
+      padding: 48px 40px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #999;
+    }
+    .page-sub {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      padding-bottom: 40px;
+    }
+
+    /* Grid */
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .card-preview {
+      padding: 52px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+    }
+    .card-footer {
+      padding: 14px 20px;
+      border-top: 1px solid #f0ede7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+    }
+    .card-footer strong { color: #333; font-weight: 700; }
+    .card-footer span { color: #bbb; }
+
+    /* Backgrounds */
+    .bg-cream { background: #f2efe9; }
+    .bg-sage { background: #4a5e4a; }
+    .bg-olive { background: #5c6b4f; }
+    .bg-forest { background: #2f3d2f; }
+    .bg-dark { background: #1a1a1a; }
+    .bg-warm { background: #eae6de; }
+    .bg-linen { background: #f0ebe2; }
+    .bg-clay { background: #b8a99a; }
+
+    /* ═══ 1: Eco Store — bold stacked, italic "the" ═══ */
+    .s1 { text-align: center; }
+    .s1 .the {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: #9a8e7a;
+      display: block;
+      margin-bottom: -6px;
+      margin-left: -80px;
+    }
+    .s1 .main {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 0.95;
+      color: #4a5e4a;
+    }
+    .s1 .bar {
+      width: 32px; height: 2px;
+      background: #9a8e7a;
+      margin: 12px auto 0;
+    }
+
+    /* ═══ 2: August — lowercase serif, spaced sub ═══ */
+    .s2 { text-align: center; }
+    .s2 .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 50px;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .s2 .name-dk { color: #4a5e4a; }
+    .s2 .name-lt { color: #f2efe9; }
+    .s2 .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px; font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      display: block; margin-top: 10px;
+      color: #a09888;
+    }
+
+    /* ═══ 3: Diaries — Playfair bold + Instrument italic ═══ */
+    .s3 { text-align: center; }
+    .s3 .top {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 42px;
+      line-height: 1;
+      color: #4a5e4a;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .s3 .mid {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #a09888;
+    }
+    .s3 .bot {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 38px;
+      color: #4a5e4a;
+    }
+
+    /* ═══ 4: Magnolia — elegant serif, one decorative letter ═══ */
+    .s4 { text-align: center; }
+    .s4 .word {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #4a5e4a;
+    }
+    .s4 .word .special {
+      font-style: italic;
+    }
+    .s4 .desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: #a09888;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      padding: 0 4px;
+    }
+
+    /* ═══ 5: Sea Salt — stacked bold serif, alternating weight ═══ */
+    .s5 { text-align: center; line-height: 0.88; }
+    .s5 .line {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 52px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      display: block;
+    }
+    .s5 .line-dk { color: #4a5e4a; }
+    .s5 .line-lt { color: #f2efe9; }
+
+    /* ═══ 6: Sara — 2x2 letter grid ═══ */
+    .s6 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      line-height: 1;
+    }
+    .s6 span {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 52px;
+      font-weight: 400;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .s6-lt span { color: #f2efe9; }
+    .s6-dk span { color: #4a5e4a; }
+    .s6 .dot-accent {
+      position: relative;
+    }
+    .s6 .dot-accent::after {
+      content: "";
+      position: absolute;
+      top: 4px; right: 16px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+    }
+    .s6-lt .dot-accent::after { background: #f2efe9; }
+    .s6-dk .dot-accent::after { background: #4a5e4a; }
+
+    /* ═══ 7: SOIL — stacked caps with accent dot ═══ */
+    .s7 { text-align: center; }
+    .s7 .word {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 52px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+    }
+    .s7-dk .word { color: #4a5e4a; }
+    .s7-lt .word { color: #f2efe9; }
+
+    /* ═══ 8: Wellness Club — decorative serif with flourish ═══ */
+    .s8 { text-align: center; }
+    .s8 .small-the {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #9a8e7a;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .s8 .big {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 46px;
+      line-height: 0.95;
+      color: #4a5e4a;
+    }
+    .s8 .small-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #a09888;
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* ═══ 9: Green Canvas — decorative "g" in serif ═══ */
+    .s9 { text-align: center; }
+    .s9 .line1 {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: #9a8e7a;
+      display: block;
+      margin-bottom: -4px;
+      margin-left: -40px;
+    }
+    .s9 .line2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 0.95;
+      color: #4a5e4a;
+    }
+    .s9 .line2 .fancy {
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    /* ═══ 10: Solea — elegant caps with accent ═══ */
+    .s10 { text-align: center; }
+    .s10 .word {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+    .s10-dk .word { color: #4a5e4a; }
+    .s10-lt .word { color: #f2efe9; }
+
+    /* ═══ 11: Statement italic — big "Edit" ═══ */
+    .s11 { text-align: center; }
+    .s11 .small {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      display: block;
+      margin-bottom: -2px;
+    }
+    .s11 .small-dk { color: #9a8e7a; }
+    .s11 .small-lt { color: rgba(242,239,233,0.45); }
+    .s11 .big {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 68px;
+      line-height: 1;
+    }
+    .s11 .big-dk { color: #4a5e4a; }
+    .s11 .big-lt { color: #f2efe9; }
+
+    /* ═══ 12: e. monogram ═══ */
+    .s12 { text-align: center; }
+    .s12 .letter {
+      font-family: 'DM Serif Display', serif;
+      font-size: 88px;
+      line-height: 1;
+    }
+    .s12 .period {
+      font-family: 'DM Serif Display', serif;
+      font-size: 88px;
+    }
+    .s12-dk .letter { color: #4a5e4a; }
+    .s12-dk .period { color: #9a8e7a; }
+    .s12-lt .letter { color: #f2efe9; }
+    .s12-lt .period { color: rgba(242,239,233,0.35); }
+
+    /* ── Section dividers ── */
+    .section-label {
+      max-width: 1100px;
+      margin: 24px auto 16px;
+      padding: 0 24px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #aaa;
+    }
+
+    /* ── Monogram strip ── */
+    .mono-section {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+    }
+    .mono-section h2 {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .mono-strip {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 12px;
+    }
+    .mono-cell {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mono-circle { border-radius: 50%; }
+
+    /* ── Substack preview ── */
+    .preview-section {
+      max-width: 480px;
+      margin: 48px auto 56px;
+      padding: 0 24px;
+    }
+    .preview-section h2 {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .sub-mock {
+      background: #f2efe9;
+      border-radius: 16px;
+      padding: 44px 32px;
+      text-align: center;
+    }
+    .sub-avatar {
+      width: 68px; height: 68px;
+      border-radius: 50%;
+      background: #4a5e4a;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sub-avatar span {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 30px;
+      color: #f2efe9;
+    }
+    .sub-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: #4a5e4a;
+      margin-bottom: 5px;
+    }
+    .sub-tag {
+      font-size: 12px;
+      color: #a09888;
+      margin-bottom: 18px;
+    }
+    .sub-btn {
+      background: #4a5e4a;
+      color: #f2efe9;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 28px;
+      border-radius: 20px;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .mono-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-title">The Conscious Edit</div>
+  <div class="page-sub">12 brand directions. Pick one, mix elements, or mark your favourites.</div>
+
+  <!-- ── ROW 1: Stacked & Bold ── -->
+  <div class="section-label">Stacked & Bold</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s1">
+          <span class="the">the</span>
+          <span class="main">conscious<br>edit</span>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="card-footer"><strong>1</strong><span>Eco Store vibe</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s5">
+          <span class="line line-dk">Con</span>
+          <span class="line line-dk">scious</span>
+          <span class="line line-dk" style="font-weight:400;font-style:italic;letter-spacing:2px;font-size:48px;">Edit</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>2</strong><span>Sea Salt vibe</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-sage">
+        <div class="s11">
+          <span class="small small-lt">the conscious</span>
+          <span class="big big-lt">Edit</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>3</strong><span>Statement italic</span></div>
+    </div>
+
+  </div>
+
+  <!-- ── ROW 2: Elegant Serif ── -->
+  <div class="section-label">Elegant Serif</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s4">
+          <span class="word">consc<span class="special">i</span>ous ed<span class="special">i</span>t</span>
+          <div class="desc"><span>conscious</span><span>edit</span></div>
+        </div>
+      </div>
+      <div class="card-footer"><strong>4</strong><span>Magnolia vibe</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-warm">
+        <div class="s10 s10-dk">
+          <span class="word">consci&#xF6;us</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>5</strong><span>Sol&eacute;a vibe</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s9">
+          <span class="line1">the</span>
+          <span class="line2"><span class="fancy">c</span>onscious <span class="fancy">e</span>dit</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>6</strong><span>Green Canvas vibe</span></div>
+    </div>
+
+  </div>
+
+  <!-- ── ROW 3: Mixed Weight ── -->
+  <div class="section-label">Mixed Weight & Script</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s3">
+          <span class="top">Conscious</span>
+          <span class="mid">the</span>
+          <span class="bot">Edit</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>7</strong><span>Diaries vibe</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s8">
+          <span class="small-the">The</span>
+          <span class="big">Conscious<br>Edit</span>
+          <span class="small-sub">Fashion &middot; Beauty &middot; Food</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>8</strong><span>Wellness Club vibe</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-linen">
+        <div class="s2">
+          <span class="name name-dk">conscious edit</span>
+          <span class="sub">the homework you don't have time to do</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>9</strong><span>August vibe</span></div>
+    </div>
+
+  </div>
+
+  <!-- ── ROW 4: Monograms & Marks ── -->
+  <div class="section-label">Monograms & Marks</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s12 s12-dk">
+          <span class="letter">e</span><span class="period">.</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>10</strong><span>"a." monogram style</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-olive">
+        <div class="s6 s6-lt">
+          <span>e</span>
+          <span class="dot-accent">d</span>
+          <span>i</span>
+          <span>t</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>11</strong><span>Sara 2x2 grid</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-preview bg-cream">
+        <div class="s7 s7-dk">
+          <span class="word">Edit</span>
+        </div>
+      </div>
+      <div class="card-footer"><strong>12</strong><span>SOIL caps style</span></div>
+    </div>
+
+  </div>
+
+  <!-- ── Monogram strip ── -->
+  <div class="mono-section">
+    <h2>Avatar Options</h2>
+    <div class="mono-strip">
+      <div class="mono-cell bg-sage">
+        <span style="font-family:'Playfair Display';font-weight:900;font-style:italic;font-size:32px;color:#f2efe9;">E</span>
+      </div>
+      <div class="mono-cell bg-cream">
+        <span style="font-family:'DM Serif Display';font-size:30px;color:#4a5e4a;">e.</span>
+      </div>
+      <div class="mono-cell bg-forest">
+        <span style="font-family:'Cormorant Garamond';font-weight:600;font-style:italic;font-size:24px;color:#f2efe9;letter-spacing:3px;">ce</span>
+      </div>
+      <div class="mono-cell bg-cream">
+        <span style="font-family:'Playfair Display';font-weight:900;font-size:22px;color:#4a5e4a;letter-spacing:2px;">CE</span>
+      </div>
+      <div class="mono-cell mono-circle bg-sage">
+        <span style="font-family:'Bodoni Moda';font-size:28px;color:#f2efe9;font-weight:400;">e</span>
+      </div>
+      <div class="mono-cell mono-circle bg-cream" style="border:1.5px solid #4a5e4a;">
+        <span style="font-family:'Bodoni Moda';font-size:28px;color:#4a5e4a;font-weight:400;">e</span>
+      </div>
+      <div class="mono-cell bg-olive">
+        <span style="font-family:'Cormorant Garamond';font-weight:700;font-size:24px;color:#f2efe9;">tce</span>
+      </div>
+      <div class="mono-cell mono-circle bg-dark">
+        <span style="font-family:'Playfair Display';font-weight:800;font-style:italic;font-size:26px;color:#f2efe9;">E</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Substack preview ── -->
+  <div class="preview-section">
+    <h2>Substack Profile</h2>
+    <div class="sub-mock">
+      <div class="sub-avatar"><span>E</span></div>
+      <div class="sub-name">The Conscious Edit</div>
+      <div class="sub-tag">The homework you don't have time to do.</div>
+      <button class="sub-btn">Subscribe</button>
+    </div>
+  </div>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4KxFW02WX8FRCiMqWFTlsLDwyUvUn7_fObmkqTYmfxWpE8Q/viewform" target="_blank" rel="noopener" style="position:fixed;bottom:24px;right:24px;background:#4a5e4a;color:#f2efe9;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;padding:12px 24px;border-radius:24px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.12);z-index:9999;">Give Feedback</a>
+
+</body>
+</html>
