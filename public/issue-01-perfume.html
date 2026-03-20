@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why I stopped buying fast fashion (and what I buy instead) - The Conscious Edit</title>
+  <title>What's actually in your perfume (and why no one talks about it) - The Conscious Edit</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -224,15 +224,10 @@
       margin: 0 auto 36px;
       padding: 0 20px;
     }
-    .hero-image img {
-      width: 100%;
-      border-radius: 0;
-      display: block;
-    }
     .hero-image-placeholder {
       width: 100%;
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #f0ebe3 0%, #d4cfc5 50%, #e8e3da 100%);
+      background: linear-gradient(135deg, #f5ede3 0%, #e8d9cb 50%, #f0e6da 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -254,13 +249,14 @@
       color: #242424;
     }
 
-    .article em {
-      font-style: italic;
-    }
+    .article em { font-style: italic; }
 
-    .article strong {
-      font-weight: 600;
-      color: #242424;
+    .article strong { font-weight: 600; color: #242424; }
+
+    .article a {
+      color: #2b6b4f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .article blockquote {
@@ -277,7 +273,7 @@
       line-height: 1.7;
     }
 
-    /* ── Section headings (editorial style) ── */
+    /* ── Section headings ── */
     .article h2 {
       font-family: 'Source Serif 4', Georgia, serif;
       font-size: 26px;
@@ -295,7 +291,7 @@
     .inline-image-placeholder {
       width: 100%;
       aspect-ratio: 3/2;
-      background: linear-gradient(160deg, #eae5dc 0%, #d8d2c7 100%);
+      background: linear-gradient(160deg, #f2ece4 0%, #e4ddd3 100%);
       border-radius: 2px;
       display: flex;
       align-items: center;
@@ -312,26 +308,47 @@
       text-align: center;
     }
 
-    /* ── Brand bullet list (SFF style) ── */
-    .brand-list {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0 28px;
-    }
-    .brand-list li {
-      margin-bottom: 20px;
-      padding-left: 0;
-    }
-    .brand-list li strong {
+    /* ── Pull emphasis ── */
+    .pull-emphasis {
+      font-size: 22px;
+      line-height: 1.6;
       color: #242424;
-    }
-    .brand-list .brand-price {
-      display: inline-block;
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      color: #2b6b4f;
       font-weight: 600;
-      margin-top: 4px;
+      margin: 36px 0;
+    }
+
+    /* ── Ingredient table ── */
+    .ingredient-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+    }
+    .ingredient-table th {
+      text-align: left;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #757575;
+      padding: 10px 16px;
+      border-bottom: 2px solid #242424;
+    }
+    .ingredient-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #242424;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .ingredient-table tr:last-child td {
+      border-bottom: none;
+    }
+    .ingredient-table .concern {
+      color: #b5453a;
+      font-weight: 600;
+      font-size: 13px;
     }
 
     /* ── Callout box ── */
@@ -350,40 +367,123 @@
       color: #2b6b4f;
       margin-bottom: 16px;
     }
-    .callout-grid {
+    .callout p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Product feature ── */
+    .product-feature {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 32px;
+      margin: 36px 0;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .product-image-placeholder {
+      width: 180px;
+      min-width: 180px;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #e8e0d4 0%, #d4ccc0 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #aaa;
+    }
+    .product-details h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 4px;
+    }
+    .product-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b6b4f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .product-details p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .product-notes {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .product-notes strong {
+      color: #242424;
+      font-weight: 600;
+    }
+    .product-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #242424;
+    }
+    .product-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #2b6b4f;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 12px;
+    }
+    .product-link:hover { text-decoration: underline; }
+
+    /* ── Comparison box ── */
+    .comparison {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .comparison-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2b6b4f;
+      margin-bottom: 16px;
+    }
+    .comparison-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
-    .callout-col h4 {
+    .comparison-col h4 {
       font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 700;
       color: #242424;
       margin-bottom: 8px;
     }
-    .callout-col p {
+    .comparison-col p {
       font-family: 'Inter', sans-serif;
       font-size: 15px;
       color: #555;
       margin-bottom: 4px;
       line-height: 1.6;
     }
-    .callout-verdict {
+    .comparison-verdict {
       margin-top: 20px;
       padding-top: 20px;
       border-top: 1px solid #e0dbd3;
       font-size: 17px;
       line-height: 1.7;
-    }
-
-    /* ── Emphasis paragraph (pull quote style) ── */
-    .pull-emphasis {
-      font-size: 22px;
-      line-height: 1.6;
-      color: #242424;
-      font-weight: 600;
-      margin: 36px 0;
     }
 
     /* ── Divider ── */
@@ -398,7 +498,7 @@
       margin: 0;
     }
 
-    /* ── Author bio (SFF style) ── */
+    /* ── Author bio ── */
     .author-bio {
       max-width: 728px;
       margin: 0 auto;
@@ -421,9 +521,7 @@
       color: #fff;
       flex-shrink: 0;
     }
-    .author-bio-content {
-      flex: 1;
-    }
+    .author-bio-content { flex: 1; }
     .author-bio-name {
       font-family: 'Inter', sans-serif;
       font-size: 15px;
@@ -450,7 +548,7 @@
       cursor: pointer;
     }
 
-    /* ── Subscribe CTA (bottom) ── */
+    /* ── Subscribe CTA ── */
     .subscribe-cta {
       max-width: 728px;
       margin: 0 auto;
@@ -502,12 +600,10 @@
       .post-title { font-size: 30px; }
       .post-subtitle { font-size: 17px; }
       body { font-size: 17px; }
-      .callout-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
+      .product-feature { flex-direction: column; }
+      .product-image-placeholder { width: 100%; min-width: auto; aspect-ratio: 4/3; }
+      .comparison-grid { grid-template-columns: 1fr; gap: 16px; }
       .author-bio { flex-direction: column; align-items: center; text-align: center; }
-      .engagement-bar { padding-left: 20px; padding-right: 20px; }
     }
   </style>
 </head>
@@ -529,13 +625,13 @@
 
   <!-- Category label -->
   <div class="category-label">
-    <a href="#">Closet: Fashion & Wardrobe</a>
+    <a href="#">Counter: Beauty & Skincare</a>
   </div>
 
   <!-- Post header -->
   <div class="post-header">
-    <h1 class="post-title">Why I stopped buying fast fashion (and what I buy instead)</h1>
-    <p class="post-subtitle">The maths that changed my mind - and the brands that actually held up.</p>
+    <h1 class="post-title">What's actually in your perfume (and why no one talks about it)</h1>
+    <p class="post-subtitle">I looked up the ingredients in my favourite fragrance. What I found was... not great.</p>
   </div>
 
   <!-- Author row -->
@@ -552,11 +648,11 @@
     <div class="engagement-left">
       <div class="engagement-item">
         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <span>24</span>
+        <span>42</span>
       </div>
       <div class="engagement-item">
         <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <span>8</span>
+        <span>14</span>
       </div>
     </div>
     <div class="engagement-right">
@@ -567,113 +663,173 @@
 
   <!-- Hero image -->
   <div class="hero-image">
-    <div class="hero-image-placeholder">[ hero image: flat lay of a curated minimal wardrobe ]</div>
+    <div class="hero-image-placeholder">[ hero image: close-up of perfume bottles on a vanity, soft natural light ]</div>
   </div>
 
   <!-- Article body -->
   <div class="article">
 
-    <p>I used to be a Zara-twice-a-month person. The kind who'd walk in for "just a look" and leave with a bag full of things I'd wear three times, wash twice, and watch pill into oblivion.</p>
+    <p>I have a confession.</p>
 
-    <p>I wasn't careless. I just didn't think about it. Fast fashion was the default. It was everywhere, it was affordable, and it was what everyone around me was doing.</p>
+    <p>I own a perfume I absolutely love. I've worn it for years. I get compliments on it constantly. It's the one product I never questioned.</p>
 
-    <p>Then I moved to London. And I started noticing something.</p>
+    <p>And then one night I made the mistake of actually reading the ingredient list.</p>
 
-    <p>My colleagues wore the same things more often, and nobody batted an eye. The charity shops here are genuinely good. My flatmate had a winter coat she'd owned for six years, and it still looked new. It wasn't a statement. It was just... how things worked.</p>
+    <p>Or rather, trying to.</p>
 
-    <p>That quiet shift made me curious. So I started looking at my own wardrobe differently. Not with guilt. With honesty.</p>
+    <p>Because here's the thing about most perfumes: they don't really have an ingredient list. Not in any meaningful way. Where your moisturiser might list 20 or 30 identifiable compounds, your perfume probably just says <em>"fragrance"</em> or <em>"parfum"</em> and leaves it at that.</p>
+
+    <p>One word. Hiding potentially dozens of undisclosed chemicals.</p>
+
+    <p>And that one word is perfectly legal.</p>
+
+    <h2>The "fragrance" loophole</h2>
+
+    <p>In the US, the FDA doesn't require companies to disclose what's inside their fragrance formulations. The reasoning? Trade secret protection. A perfume house's scent formula is considered proprietary, like Coca-Cola's recipe. So instead of listing what's actually in the bottle, they're allowed to write "fragrance" and call it a day.</p>
+
+    <p>The EU is slightly better. They require disclosure of 26 known allergens if they're present above a certain concentration. But everything else? Still hidden behind that same word.</p>
+
+    <p class="pull-emphasis">The average conventional perfume contains 20 to 40 synthetic chemicals that never appear on the label.</p>
+
+    <p>I'm not going to pretend I was calm about this. I went down a proper rabbit hole. And what I found made me rethink something I'd never given a second thought to.</p>
+
+    <h2>What's hiding in there</h2>
+
+    <p>When independent labs have tested popular fragrances, the same names keep showing up. Here's what you're likely spraying on your skin and breathing in every day:</p>
+
+    <table class="ingredient-table">
+      <thead>
+        <tr>
+          <th>Ingredient</th>
+          <th>What it does</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Phthalates</strong> (especially DEP)</td>
+          <td>Makes the scent last longer on skin</td>
+          <td><span class="concern">Linked to hormone disruption, reproductive issues. Banned in EU cosmetics, still legal in US fragrances.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Synthetic musks</strong> (galaxolide, tonalide)</td>
+          <td>Creates that "clean" base note</td>
+          <td><span class="concern">Accumulates in body tissue and breast milk. Persistent environmental pollutant. Found in waterways globally.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Formaldehyde releasers</strong> (DMDM hydantoin, quaternium-15)</td>
+          <td>Preserves the formula</td>
+          <td><span class="concern">Slowly releases formaldehyde, a known carcinogen. Can trigger skin sensitisation and allergic reactions.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Styrene</strong></td>
+          <td>Synthetic base for certain scent profiles</td>
+          <td><span class="concern">Classified as "reasonably anticipated to be a human carcinogen" by the National Toxicology Program.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Benzyl benzoate</strong></td>
+          <td>Fixative and solvent</td>
+          <td><span class="concern">Known skin sensitiser. Required to be disclosed in the EU above 0.001% in leave-on products, but often present without listing in the US.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Synthetic dyes</strong></td>
+          <td>Makes the perfume look pretty in the bottle</td>
+          <td><span class="concern">Purely cosmetic. Some are derived from petroleum. Adds zero value to the scent itself.</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Now. I want to be careful here. I'm not a toxicologist, and I'm not going to tell you your perfume is going to make you sick. The dose makes the poison, as they say.</p>
+
+    <p>But here's what bothers me: we don't get to decide for ourselves. We can't assess the dose because we don't even know what's in the bottle. You can't make an informed choice when the information is literally hidden behind a legal loophole.</p>
 
     <blockquote>
-      <p>How many of these things did I buy because I actually needed them, versus because they were &pound;12.99 and I was bored on a Tuesday night?</p>
+      <p>We read the back of every food packet. We check our skincare ingredients. But perfume? Most of us have never even thought to look.</p>
     </blockquote>
 
-    <p>The answer was uncomfortable. So I ran an experiment.</p>
+    <p>I certainly hadn't. And that's kind of the point.</p>
 
-    <h2>The 90-day wardrobe audit</h2>
+    <h2>What "clean fragrance" actually means (and what it doesn't)</h2>
 
-    <p>For three months, I tracked every piece of clothing I actually wore. Not what I owned. What I reached for.</p>
+    <p>Here's where it gets annoying. Because once you start looking for alternatives, you run into the word "clean" everywhere. And it doesn't mean anything.</p>
 
-    <p>The results were predictable and depressing in equal measure:</p>
+    <p>There's no legal definition of "clean" in fragrance. No certification. No standard. A brand can slap "clean" on their marketing and still use synthetic musks, phthalates, and undisclosed fragrance compounds. Some do.</p>
 
-    <p class="pull-emphasis">I wore about 20% of my wardrobe 80% of the time.</p>
+    <p>So what should you actually look for?</p>
 
-    <p>The rest? Impulse buys, trend pieces that felt dated within weeks, and "basics" that fell apart after a few washes. I estimated I'd spent roughly &pound;1,200 on clothes in the previous year. The stuff I actually wore regularly? Maybe &pound;300 worth.</p>
+    <p><strong>Full ingredient transparency.</strong> Every single component listed. Not "fragrance." Not "proprietary blend." The actual ingredients, by name.</p>
 
-    <p>That &pound;900 gap is what finally changed my mind. Not sustainability stats. Not documentaries. Not Instagram guilt. Just cold, boring maths.</p>
+    <p><strong>ISO 9235 compliance.</strong> This is the international standard that defines what counts as a "natural aromatic raw material." If a brand references this, they're working with botanicals and plant-derived compounds, not synthetics labelled as natural.</p>
 
-    <!-- Inline image break -->
-    <div class="inline-image">
-      <div class="inline-image-placeholder">[ image: screenshot of wardrobe tracking spreadsheet ]</div>
-      <div class="inline-image-caption">Three months of tracking. The numbers don't lie.</div>
+    <p><strong>No phthalates, no synthetic musks, no formaldehyde.</strong> These should be explicitly called out as absent, not just implied by the word "clean."</p>
+
+    <h2>One I've actually tried</h2>
+
+    <p>I'm not going to give you a list of 15 alternatives I found on Google. I hate when newsletters do that. Instead, here's one I've actually worn, actually like, and can actually speak to.</p>
+
+    <div class="product-feature">
+      <div class="product-image-placeholder">[ product image: Heretic Florgasm bottle ]</div>
+      <div class="product-details">
+        <div class="product-brand">Heretic Parfum</div>
+        <h3>Florgasm</h3>
+        <p>100% naturally derived ingredients, blended in organic non-GMO sugarcane alcohol. Every single ingredient is listed on their site by scientific name, description, and type. No phthalates. No parabens. No synthetic dyes. No formaldehyde. Vegan and cruelty-free. ISO 9235 compliant.</p>
+        <div class="product-notes">
+          <strong>Top:</strong> Bergamot, Bitter Orange, Pink Pepper, Coriander<br>
+          <strong>Heart:</strong> Jasmine, Ylang-Ylang, Orange Blossom, Tuberose<br>
+          <strong>Base:</strong> Hibiscus Seed (a natural musk alternative)
+        </div>
+        <p>It smells like the best version of a floral perfume. Jasmine-forward, warm, slightly peppery. Not heavy. Not sweet in that synthetic way. It's sheer and close to the skin, which is a trade-off of natural ingredients - they don't scream across the room. You have to reapply. I'm fine with that.</p>
+        <p>
+          <span class="product-price">$65 (15ml) / $165 (50ml)</span>
+          <a href="https://hereticparfum.com/products/florgasm" class="product-link">Shop Heretic &rarr;</a>
+        </p>
+      </div>
     </div>
 
-    <h2>What I buy instead (and what it actually costs)</h2>
+    <h2>The honest trade-offs</h2>
 
-    <p>I'm not going to pretend I overhauled everything overnight. I didn't. It took about a year of slow swaps. And I'm still not perfect. But here are the brands and approaches that actually stuck:</p>
+    <p>I'm going to be real because that's the whole point of this newsletter:</p>
 
-    <ul class="brand-list">
-      <li>
-        <strong>ARKET</strong> - H&M's quieter, better-made sibling. Their basics (t-shirts, knitwear, trousers) are genuinely good quality for the price. Not the cheapest, but the cost-per-wear is dramatically lower than fast fashion equivalents. A &pound;35 ARKET t-shirt that lasts 2 years beats five &pound;7 ones that last 3 months each.
-        <br><span class="brand-price">T-shirts: &pound;25-40 &middot; Knitwear: &pound;55-89</span>
-      </li>
-      <li>
-        <strong>& Other Stories</strong> - Another H&M group brand, but with noticeably better fabrics and construction. Their linen and cotton pieces hold up really well. I've had a pair of their wide-leg trousers for 18 months, worn them weekly, and they look the same as day one. The trick: buy their natural fabrics (cotton, linen, wool). Skip the polyester blends.
-        <br><span class="brand-price">Trousers: &pound;65-85 &middot; Dresses: &pound;79-120</span>
-      </li>
-      <li>
-        <strong>Charity shops (yes, really)</strong> - London charity shops are a different universe from what I grew up with in North America. In areas like Notting Hill, Hampstead, or Marylebone, you'll find barely-worn COS, Reiss, and even designer pieces for under &pound;15. My best find: a Cos wool coat for &pound;18 that retails for &pound;175. I go once a fortnight. It takes patience, but the wins are real.
-        <br><span class="brand-price">Avg spend per visit: &pound;10-25</span>
-      </li>
-      <li>
-        <strong>Uniqlo (selectively)</strong> - Not a sustainable brand, and I won't pretend otherwise. But their HeatTech base layers, Supima cotton tees, and merino knitwear are workhorses. If you're going to buy from a large retailer, buy the things Uniqlo does well and skip the trendy collaborations. I've had Uniqlo basics that outlasted "sustainable" brands twice their price.
-        <br><span class="brand-price">Basics: &pound;10-30 &middot; Knitwear: &pound;30-50</span>
-      </li>
-    </ul>
+    <p><strong>Natural fragrances don't last as long.</strong> Where a synthetic perfume might carry you from 8am to midnight, a natural one fades within a few hours. The molecules are lighter. That's just chemistry. You'll need to carry it with you and reapply.</p>
 
-    <h2>What I stopped doing</h2>
+    <p><strong>They're more expensive per ml.</strong> Plant extracts and essential oils cost more than lab-made synthetics. That's a fact. But you're also not spraying hormone disruptors on your wrists every morning, so there's a calculation to make.</p>
 
-    <p><strong>Browsing for fun.</strong> I used to scroll ASOS the way people scroll TikTok. Mindlessly. If I wasn't looking for something specific, I'd still end up buying something. Now I only shop when something wears out or I've identified a gap. Boring? Yes. Effective? Extremely.</p>
+    <p><strong>The scent profile is different.</strong> If you love the specific sharp, bright, linear scent that synthetic fragrances deliver, natural alternatives might feel muted or "rounder" to you. They evolve differently on skin. I personally prefer that now. But it took some adjusting.</p>
 
-    <p><strong>Chasing trends.</strong> Barrel-leg jeans, butter yellow, mob wife aesthetic. All fun, all temporary. I buy things that work with what I already own. My wardrobe is smaller, more repetitive, and honestly? I get ready faster and feel better in everything I put on.</p>
-
-    <p><strong>Justifying cheap prices.</strong> "It's only &pound;8" is the most expensive sentence in fast fashion. I've probably said it 500 times. Those &pound;8 purchases added up to hundreds of pounds of clothes I donated within a year.</p>
-
-    <h2>The honest maths</h2>
-
-    <p>Here's roughly what my annual clothing spend looked like, before and after:</p>
-
-    <div class="callout">
-      <div class="callout-label">The Numbers</div>
-      <div class="callout-grid">
-        <div class="callout-col">
-          <h4>Before (fast fashion default)</h4>
-          <p>~60 items/year</p>
-          <p>Avg cost: &pound;20/item</p>
-          <p>Avg lifespan: 4-6 months</p>
-          <p><strong>Annual spend: ~&pound;1,200</strong></p>
+    <div class="comparison">
+      <div class="comparison-label">The Real Comparison</div>
+      <div class="comparison-grid">
+        <div class="comparison-col">
+          <h4>Conventional perfume</h4>
+          <p>Lasts 8-12 hours</p>
+          <p>Strong sillage (projects)</p>
+          <p>20-40 undisclosed synthetic chemicals</p>
+          <p>Phthalates likely present</p>
+          <p>&pound;60-150 for 50ml</p>
         </div>
-        <div class="callout-col">
-          <h4>After (conscious buying)</h4>
-          <p>~15-20 items/year</p>
-          <p>Avg cost: &pound;45/item</p>
-          <p>Avg lifespan: 2-3 years</p>
-          <p><strong>Annual spend: ~&pound;750</strong></p>
+        <div class="comparison-col">
+          <h4>Natural perfume (e.g. Heretic)</h4>
+          <p>Lasts 2-4 hours</p>
+          <p>Stays close to skin</p>
+          <p>Every ingredient listed by name</p>
+          <p>No phthalates, no synthetic musks</p>
+          <p>$165 / ~&pound;130 for 50ml</p>
         </div>
       </div>
-      <div class="callout-verdict">
-        <strong>The result:</strong> I spend less, own less, and like everything in my wardrobe more. The cost-per-wear on a &pound;45 jumper I wear weekly for two years is about &pound;0.43. The cost-per-wear on a &pound;12 jumper I wore six times before it pilled? &pound;2. Sustainability arguments aside, the maths just works.
+      <div class="comparison-verdict">
+        <strong>My take:</strong> Natural perfume costs more and lasts less. That's the honest truth. But for something I spray directly onto my skin and inhale all day, I've decided I want to know what's in it. Your calculation might be different. That's fine.
       </div>
     </div>
 
     <h2>What I'd tell you if we were having coffee</h2>
 
-    <p>Don't overhaul your wardrobe. Don't throw everything out and start over with a "capsule wardrobe" you saw on Pinterest. That's just more consumption wearing a different hat.</p>
+    <p>You don't need to throw out your perfume collection tomorrow. I haven't. I still have a couple of conventional fragrances I wear occasionally.</p>
 
-    <p>Instead: next time something wears out, replace it with something better. One piece at a time. That's it. That's the whole strategy.</p>
+    <p>But I'd tell you to do one thing: go look up the ingredients in your daily perfume. Not on the bottle - there won't be much there. Search for the brand's full ingredient list on their website or on a database like EWG's Skin Deep.</p>
 
-    <p>You don't have to care about the environment to benefit from this. You just have to care about your wallet, your time, and actually liking the clothes you put on every morning.</p>
+    <p>If you can find a full list? Great. Make your own call with open eyes.</p>
 
-    <p>That's what worked for me. I'll keep sharing what I find.</p>
+    <p>If the brand won't tell you what's in the bottle? That tells you something too.</p>
 
     <p style="margin-top: 36px; font-style: italic; color: #757575;">See you next Tuesday.</p>
     <p style="font-style: italic; color: #757575;">xx KP</p>
