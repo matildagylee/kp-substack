@@ -37,29 +37,31 @@ A weekly newsletter for women who *want* to make better choices about what they 
 
 ## LinkedIn Intro (Kristina's launch post)
 
-> I spent the better part of a decade being the definition of overconsumption. Fast fashion hauls. Whatever skincare was trending. Food choices driven entirely by convenience.
+> I spent the better part of a decade being the definition of overconsumption.
+>
+> Fast fashion hauls. Whatever skincare was trending. Food choices driven entirely by convenience.
 >
 > And I didn't think twice about any of it.
 >
-> Then I moved to London. And something shifted.
+> Then I moved to London.
 >
-> I started noticing how differently people consume here. Smaller wardrobes. Local markets. Ingredient lists that don't read like a chemistry exam. It wasn't performative or preachy. It was just... normal.
->
-> And once I saw it, I couldn't unsee it.
+> I started noticing how differently people consume here. Smaller wardrobes. Local markets (which I'm absolutely obsessed with). Ingredient lists that don't read like a chemistry exam. It wasn't performative or preachy. This was the norm.
 >
 > So I started doing the homework. Testing things out. Swapping products - not all at once, but slowly. What actually works? What's worth the price? What's just greenwashing in better packaging?
 >
 > Turns out, a lot of "better choices" are also just... better. Better quality. Better value over time. Sometimes even cheaper.
 >
-> **The Conscious Edit** is where I share what I've learned.
+> **The Conscious Edit** is where I want to share what I've learned.
 >
-> No affiliate links. Just honest, personal experience from someone with a full-time job who doesn't have unlimited time or money to throw at this stuff.
+> Honest, personal experience from someone with a full-time job who doesn't have unlimited time or money to throw at this stuff.
 >
 > If you've ever wanted to shop cleaner, eat better, or just understand what you're actually putting on your body - but didn't know where to start - this is for you.
 >
-> First issue drops [DATE]. Subscribe free on Substack → [link]
+> **Let me do the homework so you don't have to.**
 >
 > xx KP
+>
+> #consciousliving #substack #newsletter #sustainability
 
 ---
 
