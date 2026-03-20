@@ -3,7 +3,7 @@
 ## Newsletter Identity
 
 **Name suggestion:** *The Conscious Edit*
-**Tagline:** Real reviews. Real budgets. No sponsorships.
+**Tagline:** The homework you don't have time to do.
 **Author:** Kristina P.
 **Platform:** Substack (free tier to start)
 **Frequency:** Weekly (every Tuesday, 7 AM GMT)
