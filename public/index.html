@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's actually in your perfume (and why no one talks about it) - The Conscious Edit</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #fff;
+      color: #242424;
+      font-family: 'Source Serif 4', Georgia, serif;
+      line-height: 1.8;
+      font-size: 19px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Substack navbar ── */
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar-inner {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .navbar-logo-icon {
+      width: 28px;
+      height: 28px;
+      background: #2b6b4f;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+    .navbar-logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #242424;
+    }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .navbar-signin {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #757575;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .navbar-subscribe {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      background: #2b6b4f;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .navbar-subscribe:hover { background: #22563f; }
+
+    /* ── Category label ── */
+    .category-label {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 28px 20px 0;
+    }
+    .category-label a {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2b6b4f;
+      text-decoration: none;
+    }
+    .category-label a:hover { text-decoration: underline; }
+
+    /* ── Post header ── */
+    .post-header {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 12px 20px 0;
+    }
+    .post-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #242424;
+      margin-bottom: 10px;
+    }
+    .post-subtitle {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #757575;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+
+    /* ── Author row ── */
+    .author-row {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2b6b4f 0%, #4a9e75 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .author-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #242424;
+    }
+    .author-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* ── Engagement bar ── */
+    .engagement-bar {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 32px;
+    }
+    .engagement-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .engagement-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #757575;
+      cursor: pointer;
+    }
+    .engagement-item svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #757575;
+      stroke-width: 1.5;
+    }
+    .engagement-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .engagement-right svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #757575;
+      stroke-width: 1.5;
+      cursor: pointer;
+    }
+
+    /* ── Hero image ── */
+    .hero-image {
+      max-width: 728px;
+      margin: 0 auto 36px;
+      padding: 0 20px;
+    }
+    .hero-image-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #f5ede3 0%, #e8d9cb 50%, #f0e6da 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Article body ── */
+    .article {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .article p {
+      margin-bottom: 22px;
+      color: #242424;
+    }
+
+    .article em { font-style: italic; }
+
+    .article strong { font-weight: 600; color: #242424; }
+
+    .article a {
+      color: #2b6b4f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .article blockquote {
+      margin: 32px 0;
+      padding: 0 0 0 24px;
+      border-left: 3px solid #2b6b4f;
+      font-style: italic;
+      color: #555;
+    }
+    .article blockquote p {
+      margin-bottom: 0;
+      color: #555;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    /* ── Section headings ── */
+    .article h2 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #242424;
+      margin: 48px 0 18px;
+      line-height: 1.3;
+    }
+
+    /* ── Inline image breaks ── */
+    .inline-image {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .inline-image-placeholder {
+      width: 100%;
+      aspect-ratio: 3/2;
+      background: linear-gradient(160deg, #f2ece4 0%, #e4ddd3 100%);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #aaa;
+    }
+    .inline-image-caption {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #999;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    /* ── Pull emphasis ── */
+    .pull-emphasis {
+      font-size: 22px;
+      line-height: 1.6;
+      color: #242424;
+      font-weight: 600;
+      margin: 36px 0;
+    }
+
+    /* ── Ingredient table ── */
+    .ingredient-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+    }
+    .ingredient-table th {
+      text-align: left;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #757575;
+      padding: 10px 16px;
+      border-bottom: 2px solid #242424;
+    }
+    .ingredient-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #242424;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .ingredient-table tr:last-child td {
+      border-bottom: none;
+    }
+    .ingredient-table .concern {
+      color: #b5453a;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .callout-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2b6b4f;
+      margin-bottom: 16px;
+    }
+    .callout p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Product feature ── */
+    .product-feature {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 32px;
+      margin: 36px 0;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .product-image-placeholder {
+      width: 180px;
+      min-width: 180px;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #e8e0d4 0%, #d4ccc0 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #aaa;
+    }
+    .product-details h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 4px;
+    }
+    .product-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b6b4f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .product-details p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .product-notes {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .product-notes strong {
+      color: #242424;
+      font-weight: 600;
+    }
+    .product-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #242424;
+    }
+    .product-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #2b6b4f;
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 12px;
+    }
+    .product-link:hover { text-decoration: underline; }
+
+    /* ── Comparison box ── */
+    .comparison {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .comparison-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2b6b4f;
+      margin-bottom: 16px;
+    }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .comparison-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 8px;
+    }
+    .comparison-col p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+    .comparison-verdict {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0dbd3;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Divider ── */
+    .section-divider {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-divider hr {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 0;
+    }
+
+    /* ── Author bio ── */
+    .author-bio {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .author-bio-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2b6b4f 0%, #4a9e75 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-bio-content { flex: 1; }
+    .author-bio-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 4px;
+    }
+    .author-bio-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #757575;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .author-bio-subscribe {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      background: #2b6b4f;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* ── Subscribe CTA ── */
+    .subscribe-cta {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .subscribe-cta h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 16px;
+    }
+    .subscribe-cta-button {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      background: #2b6b4f;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 20px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .subscribe-cta-button:hover { background: #22563f; }
+
+    /* ── Footer ── */
+    .footer {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #999;
+      line-height: 2;
+    }
+    .footer a {
+      color: #757575;
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .post-title { font-size: 30px; }
+      .post-subtitle { font-size: 17px; }
+      body { font-size: 17px; }
+      .product-feature { flex-direction: column; }
+      .product-image-placeholder { width: 100%; min-width: auto; aspect-ratio: 4/3; }
+      .comparison-grid { grid-template-columns: 1fr; gap: 16px; }
+      .author-bio { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <div class="navbar-logo-icon">CE</div>
+        <span class="navbar-logo-text">The Conscious Edit</span>
+      </a>
+      <div class="navbar-actions">
+        <button class="navbar-signin">Sign in</button>
+        <button class="navbar-subscribe">Subscribe</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Category label -->
+  <div class="category-label">
+    <a href="#">Counter: Beauty & Skincare</a>
+  </div>
+
+  <!-- Post header -->
+  <div class="post-header">
+    <h1 class="post-title">What's actually in your perfume (and why no one talks about it)</h1>
+    <p class="post-subtitle">I looked up the ingredients in my favourite fragrance. What I found was... not great.</p>
+  </div>
+
+  <!-- Author row -->
+  <div class="author-row">
+    <div class="author-avatar">KP</div>
+    <div class="author-info">
+      <div class="author-name">Kristina P.</div>
+      <div class="author-date">Apr 01, 2026</div>
+    </div>
+  </div>
+
+  <!-- Engagement bar -->
+  <div class="engagement-bar">
+    <div class="engagement-left">
+      <div class="engagement-item">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span>42</span>
+      </div>
+      <div class="engagement-item">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>14</span>
+      </div>
+    </div>
+    <div class="engagement-right">
+      <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    </div>
+  </div>
+
+  <!-- Hero image -->
+  <div class="hero-image">
+    <div class="hero-image-placeholder">[ hero image: close-up of perfume bottles on a vanity, soft natural light ]</div>
+  </div>
+
+  <!-- Article body -->
+  <div class="article">
+
+    <p>I have a confession.</p>
+
+    <p>I own a perfume I absolutely love. I've worn it for years. I get compliments on it constantly. It's the one product I never questioned.</p>
+
+    <p>And then one night I made the mistake of actually reading the ingredient list.</p>
+
+    <p>Or rather, trying to.</p>
+
+    <p>Because here's the thing about most perfumes: they don't really have an ingredient list. Not in any meaningful way. Where your moisturiser might list 20 or 30 identifiable compounds, your perfume probably just says <em>"fragrance"</em> or <em>"parfum"</em> and leaves it at that.</p>
+
+    <p>One word. Hiding potentially dozens of undisclosed chemicals.</p>
+
+    <p>And that one word is perfectly legal.</p>
+
+    <h2>The "fragrance" loophole</h2>
+
+    <p>In the US, the FDA doesn't require companies to disclose what's inside their fragrance formulations. The reasoning? Trade secret protection. A perfume house's scent formula is considered proprietary, like Coca-Cola's recipe. So instead of listing what's actually in the bottle, they're allowed to write "fragrance" and call it a day.</p>
+
+    <p>The EU is slightly better. They require disclosure of 26 known allergens if they're present above a certain concentration. But everything else? Still hidden behind that same word.</p>
+
+    <p class="pull-emphasis">The average conventional perfume contains 20 to 40 synthetic chemicals that never appear on the label.</p>
+
+    <p>I'm not going to pretend I was calm about this. I went down a proper rabbit hole. And what I found made me rethink something I'd never given a second thought to.</p>
+
+    <h2>What's hiding in there</h2>
+
+    <p>When independent labs have tested popular fragrances, the same names keep showing up. Here's what you're likely spraying on your skin and breathing in every day:</p>
+
+    <table class="ingredient-table">
+      <thead>
+        <tr>
+          <th>Ingredient</th>
+          <th>What it does</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Phthalates</strong> (especially DEP)</td>
+          <td>Makes the scent last longer on skin</td>
+          <td><span class="concern">Linked to hormone disruption, reproductive issues. Banned in EU cosmetics, still legal in US fragrances.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Synthetic musks</strong> (galaxolide, tonalide)</td>
+          <td>Creates that "clean" base note</td>
+          <td><span class="concern">Accumulates in body tissue and breast milk. Persistent environmental pollutant. Found in waterways globally.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Formaldehyde releasers</strong> (DMDM hydantoin, quaternium-15)</td>
+          <td>Preserves the formula</td>
+          <td><span class="concern">Slowly releases formaldehyde, a known carcinogen. Can trigger skin sensitisation and allergic reactions.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Styrene</strong></td>
+          <td>Synthetic base for certain scent profiles</td>
+          <td><span class="concern">Classified as "reasonably anticipated to be a human carcinogen" by the National Toxicology Program.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Benzyl benzoate</strong></td>
+          <td>Fixative and solvent</td>
+          <td><span class="concern">Known skin sensitiser. Required to be disclosed in the EU above 0.001% in leave-on products, but often present without listing in the US.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Synthetic dyes</strong></td>
+          <td>Makes the perfume look pretty in the bottle</td>
+          <td><span class="concern">Purely cosmetic. Some are derived from petroleum. Adds zero value to the scent itself.</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Now. I want to be careful here. I'm not a toxicologist, and I'm not going to tell you your perfume is going to make you sick. The dose makes the poison, as they say.</p>
+
+    <p>But here's what bothers me: we don't get to decide for ourselves. We can't assess the dose because we don't even know what's in the bottle. You can't make an informed choice when the information is literally hidden behind a legal loophole.</p>
+
+    <blockquote>
+      <p>We read the back of every food packet. We check our skincare ingredients. But perfume? Most of us have never even thought to look.</p>
+    </blockquote>
+
+    <p>I certainly hadn't. And that's kind of the point.</p>
+
+    <h2>What "clean fragrance" actually means (and what it doesn't)</h2>
+
+    <p>Here's where it gets annoying. Because once you start looking for alternatives, you run into the word "clean" everywhere. And it doesn't mean anything.</p>
+
+    <p>There's no legal definition of "clean" in fragrance. No certification. No standard. A brand can slap "clean" on their marketing and still use synthetic musks, phthalates, and undisclosed fragrance compounds. Some do.</p>
+
+    <p>So what should you actually look for?</p>
+
+    <p><strong>Full ingredient transparency.</strong> Every single component listed. Not "fragrance." Not "proprietary blend." The actual ingredients, by name.</p>
+
+    <p><strong>ISO 9235 compliance.</strong> This is the international standard that defines what counts as a "natural aromatic raw material." If a brand references this, they're working with botanicals and plant-derived compounds, not synthetics labelled as natural.</p>
+
+    <p><strong>No phthalates, no synthetic musks, no formaldehyde.</strong> These should be explicitly called out as absent, not just implied by the word "clean."</p>
+
+    <h2>One I've actually tried</h2>
+
+    <p>I'm not going to give you a list of 15 alternatives I found on Google. I hate when newsletters do that. Instead, here's one I've actually worn, actually like, and can actually speak to.</p>
+
+    <div class="product-feature">
+      <div class="product-image-placeholder">[ product image: Heretic Florgasm bottle ]</div>
+      <div class="product-details">
+        <div class="product-brand">Heretic Parfum</div>
+        <h3>Florgasm</h3>
+        <p>100% naturally derived ingredients, blended in organic non-GMO sugarcane alcohol. Every single ingredient is listed on their site by scientific name, description, and type. No phthalates. No parabens. No synthetic dyes. No formaldehyde. Vegan and cruelty-free. ISO 9235 compliant.</p>
+        <div class="product-notes">
+          <strong>Top:</strong> Bergamot, Bitter Orange, Pink Pepper, Coriander<br>
+          <strong>Heart:</strong> Jasmine, Ylang-Ylang, Orange Blossom, Tuberose<br>
+          <strong>Base:</strong> Hibiscus Seed (a natural musk alternative)
+        </div>
+        <p>It smells like the best version of a floral perfume. Jasmine-forward, warm, slightly peppery. Not heavy. Not sweet in that synthetic way. It's sheer and close to the skin, which is a trade-off of natural ingredients - they don't scream across the room. You have to reapply. I'm fine with that.</p>
+        <p>
+          <span class="product-price">$65 (15ml) / $165 (50ml)</span>
+          <a href="https://hereticparfum.com/products/florgasm" class="product-link">Shop Heretic &rarr;</a>
+        </p>
+      </div>
+    </div>
+
+    <h2>The honest trade-offs</h2>
+
+    <p>I'm going to be real because that's the whole point of this newsletter:</p>
+
+    <p><strong>Natural fragrances don't last as long.</strong> Where a synthetic perfume might carry you from 8am to midnight, a natural one fades within a few hours. The molecules are lighter. That's just chemistry. You'll need to carry it with you and reapply.</p>
+
+    <p><strong>They're more expensive per ml.</strong> Plant extracts and essential oils cost more than lab-made synthetics. That's a fact. But you're also not spraying hormone disruptors on your wrists every morning, so there's a calculation to make.</p>
+
+    <p><strong>The scent profile is different.</strong> If you love the specific sharp, bright, linear scent that synthetic fragrances deliver, natural alternatives might feel muted or "rounder" to you. They evolve differently on skin. I personally prefer that now. But it took some adjusting.</p>
+
+    <div class="comparison">
+      <div class="comparison-label">The Real Comparison</div>
+      <div class="comparison-grid">
+        <div class="comparison-col">
+          <h4>Conventional perfume</h4>
+          <p>Lasts 8-12 hours</p>
+          <p>Strong sillage (projects)</p>
+          <p>20-40 undisclosed synthetic chemicals</p>
+          <p>Phthalates likely present</p>
+          <p>&pound;60-150 for 50ml</p>
+        </div>
+        <div class="comparison-col">
+          <h4>Natural perfume (e.g. Heretic)</h4>
+          <p>Lasts 2-4 hours</p>
+          <p>Stays close to skin</p>
+          <p>Every ingredient listed by name</p>
+          <p>No phthalates, no synthetic musks</p>
+          <p>$165 / ~&pound;130 for 50ml</p>
+        </div>
+      </div>
+      <div class="comparison-verdict">
+        <strong>My take:</strong> Natural perfume costs more and lasts less. That's the honest truth. But for something I spray directly onto my skin and inhale all day, I've decided I want to know what's in it. Your calculation might be different. That's fine.
+      </div>
+    </div>
+
+    <h2>What I'd tell you if we were having coffee</h2>
+
+    <p>You don't need to throw out your perfume collection tomorrow. I haven't. I still have a couple of conventional fragrances I wear occasionally.</p>
+
+    <p>But I'd tell you to do one thing: go look up the ingredients in your daily perfume. Not on the bottle - there won't be much there. Search for the brand's full ingredient list on their website or on a database like EWG's Skin Deep.</p>
+
+    <p>If you can find a full list? Great. Make your own call with open eyes.</p>
+
+    <p>If the brand won't tell you what's in the bottle? That tells you something too.</p>
+
+    <p style="margin-top: 36px; font-style: italic; color: #757575;">See you next Tuesday.</p>
+    <p style="font-style: italic; color: #757575;">xx KP</p>
+
+  </div>
+
+  <!-- Section divider -->
+  <div class="section-divider"><hr></div>
+
+  <!-- Author bio -->
+  <div class="author-bio">
+    <div class="author-bio-avatar">KP</div>
+    <div class="author-bio-content">
+      <div class="author-bio-name">Kristina P.</div>
+      <div class="author-bio-desc">Writing about conscious consumption through the lens of real life, real budgets, and real trade-offs. London-based, North American roots. No sponsorships, no BS.</div>
+      <button class="author-bio-subscribe">Subscribe to Kristina</button>
+    </div>
+  </div>
+
+  <!-- Section divider -->
+  <div class="section-divider"><hr></div>
+
+  <!-- Subscribe CTA -->
+  <div class="subscribe-cta">
+    <h3>Ready for more?</h3>
+    <button class="subscribe-cta-button">Subscribe</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2026 Kristina P. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Collection notice</a></p>
+    <p style="margin-top: 8px;"><a href="#">Start your Substack</a> &middot; <a href="#">Get the app</a></p>
+    <p style="margin-top: 12px; color: #bbb;">Substack is the home for great culture</p>
+  </div>
+
+</body>
+</html>

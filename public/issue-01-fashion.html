@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I stopped buying fast fashion (and what I buy instead) - The Conscious Edit</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #fff;
+      color: #242424;
+      font-family: 'Source Serif 4', Georgia, serif;
+      line-height: 1.8;
+      font-size: 19px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Substack navbar ── */
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar-inner {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .navbar-logo-icon {
+      width: 28px;
+      height: 28px;
+      background: #2b6b4f;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+    .navbar-logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: #242424;
+    }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .navbar-signin {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #757575;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .navbar-subscribe {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      background: #2b6b4f;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .navbar-subscribe:hover { background: #22563f; }
+
+    /* ── Category label ── */
+    .category-label {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 28px 20px 0;
+    }
+    .category-label a {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2b6b4f;
+      text-decoration: none;
+    }
+    .category-label a:hover { text-decoration: underline; }
+
+    /* ── Post header ── */
+    .post-header {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 12px 20px 0;
+    }
+    .post-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #242424;
+      margin-bottom: 10px;
+    }
+    .post-subtitle {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #757575;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+
+    /* ── Author row ── */
+    .author-row {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2b6b4f 0%, #4a9e75 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .author-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #242424;
+    }
+    .author-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* ── Engagement bar ── */
+    .engagement-bar {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 32px;
+    }
+    .engagement-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .engagement-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #757575;
+      cursor: pointer;
+    }
+    .engagement-item svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #757575;
+      stroke-width: 1.5;
+    }
+    .engagement-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .engagement-right svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #757575;
+      stroke-width: 1.5;
+      cursor: pointer;
+    }
+
+    /* ── Hero image ── */
+    .hero-image {
+      max-width: 728px;
+      margin: 0 auto 36px;
+      padding: 0 20px;
+    }
+    .hero-image img {
+      width: 100%;
+      border-radius: 0;
+      display: block;
+    }
+    .hero-image-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #f0ebe3 0%, #d4cfc5 50%, #e8e3da 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Article body ── */
+    .article {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .article p {
+      margin-bottom: 22px;
+      color: #242424;
+    }
+
+    .article em {
+      font-style: italic;
+    }
+
+    .article strong {
+      font-weight: 600;
+      color: #242424;
+    }
+
+    .article blockquote {
+      margin: 32px 0;
+      padding: 0 0 0 24px;
+      border-left: 3px solid #2b6b4f;
+      font-style: italic;
+      color: #555;
+    }
+    .article blockquote p {
+      margin-bottom: 0;
+      color: #555;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    /* ── Section headings (editorial style) ── */
+    .article h2 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #242424;
+      margin: 48px 0 18px;
+      line-height: 1.3;
+    }
+
+    /* ── Inline image breaks ── */
+    .inline-image {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .inline-image-placeholder {
+      width: 100%;
+      aspect-ratio: 3/2;
+      background: linear-gradient(160deg, #eae5dc 0%, #d8d2c7 100%);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #aaa;
+    }
+    .inline-image-caption {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #999;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    /* ── Brand bullet list (SFF style) ── */
+    .brand-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 28px;
+    }
+    .brand-list li {
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
+    .brand-list li strong {
+      color: #242424;
+    }
+    .brand-list .brand-price {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #2b6b4f;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .callout-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2b6b4f;
+      margin-bottom: 16px;
+    }
+    .callout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .callout-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 8px;
+    }
+    .callout-col p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+    .callout-verdict {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0dbd3;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── Emphasis paragraph (pull quote style) ── */
+    .pull-emphasis {
+      font-size: 22px;
+      line-height: 1.6;
+      color: #242424;
+      font-weight: 600;
+      margin: 36px 0;
+    }
+
+    /* ── Divider ── */
+    .section-divider {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-divider hr {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 0;
+    }
+
+    /* ── Author bio (SFF style) ── */
+    .author-bio {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .author-bio-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2b6b4f 0%, #4a9e75 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-bio-content {
+      flex: 1;
+    }
+    .author-bio-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 4px;
+    }
+    .author-bio-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #757575;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .author-bio-subscribe {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      background: #2b6b4f;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* ── Subscribe CTA (bottom) ── */
+    .subscribe-cta {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .subscribe-cta h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 16px;
+    }
+    .subscribe-cta-button {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      background: #2b6b4f;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 20px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .subscribe-cta-button:hover { background: #22563f; }
+
+    /* ── Footer ── */
+    .footer {
+      max-width: 728px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #999;
+      line-height: 2;
+    }
+    .footer a {
+      color: #757575;
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .post-title { font-size: 30px; }
+      .post-subtitle { font-size: 17px; }
+      body { font-size: 17px; }
+      .callout-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .author-bio { flex-direction: column; align-items: center; text-align: center; }
+      .engagement-bar { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <div class="navbar-logo-icon">CE</div>
+        <span class="navbar-logo-text">The Conscious Edit</span>
+      </a>
+      <div class="navbar-actions">
+        <button class="navbar-signin">Sign in</button>
+        <button class="navbar-subscribe">Subscribe</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Category label -->
+  <div class="category-label">
+    <a href="#">Closet: Fashion & Wardrobe</a>
+  </div>
+
+  <!-- Post header -->
+  <div class="post-header">
+    <h1 class="post-title">Why I stopped buying fast fashion (and what I buy instead)</h1>
+    <p class="post-subtitle">The maths that changed my mind - and the brands that actually held up.</p>
+  </div>
+
+  <!-- Author row -->
+  <div class="author-row">
+    <div class="author-avatar">KP</div>
+    <div class="author-info">
+      <div class="author-name">Kristina P.</div>
+      <div class="author-date">Apr 01, 2026</div>
+    </div>
+  </div>
+
+  <!-- Engagement bar -->
+  <div class="engagement-bar">
+    <div class="engagement-left">
+      <div class="engagement-item">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span>24</span>
+      </div>
+      <div class="engagement-item">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>8</span>
+      </div>
+    </div>
+    <div class="engagement-right">
+      <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    </div>
+  </div>
+
+  <!-- Hero image -->
+  <div class="hero-image">
+    <div class="hero-image-placeholder">[ hero image: flat lay of a curated minimal wardrobe ]</div>
+  </div>
+
+  <!-- Article body -->
+  <div class="article">
+
+    <p>I used to be a Zara-twice-a-month person. The kind who'd walk in for "just a look" and leave with a bag full of things I'd wear three times, wash twice, and watch pill into oblivion.</p>
+
+    <p>I wasn't careless. I just didn't think about it. Fast fashion was the default. It was everywhere, it was affordable, and it was what everyone around me was doing.</p>
+
+    <p>Then I moved to London. And I started noticing something.</p>
+
+    <p>My colleagues wore the same things more often, and nobody batted an eye. The charity shops here are genuinely good. My flatmate had a winter coat she'd owned for six years, and it still looked new. It wasn't a statement. It was just... how things worked.</p>
+
+    <p>That quiet shift made me curious. So I started looking at my own wardrobe differently. Not with guilt. With honesty.</p>
+
+    <blockquote>
+      <p>How many of these things did I buy because I actually needed them, versus because they were &pound;12.99 and I was bored on a Tuesday night?</p>
+    </blockquote>
+
+    <p>The answer was uncomfortable. So I ran an experiment.</p>
+
+    <h2>The 90-day wardrobe audit</h2>
+
+    <p>For three months, I tracked every piece of clothing I actually wore. Not what I owned. What I reached for.</p>
+
+    <p>The results were predictable and depressing in equal measure:</p>
+
+    <p class="pull-emphasis">I wore about 20% of my wardrobe 80% of the time.</p>
+
+    <p>The rest? Impulse buys, trend pieces that felt dated within weeks, and "basics" that fell apart after a few washes. I estimated I'd spent roughly &pound;1,200 on clothes in the previous year. The stuff I actually wore regularly? Maybe &pound;300 worth.</p>
+
+    <p>That &pound;900 gap is what finally changed my mind. Not sustainability stats. Not documentaries. Not Instagram guilt. Just cold, boring maths.</p>
+
+    <!-- Inline image break -->
+    <div class="inline-image">
+      <div class="inline-image-placeholder">[ image: screenshot of wardrobe tracking spreadsheet ]</div>
+      <div class="inline-image-caption">Three months of tracking. The numbers don't lie.</div>
+    </div>
+
+    <h2>What I buy instead (and what it actually costs)</h2>
+
+    <p>I'm not going to pretend I overhauled everything overnight. I didn't. It took about a year of slow swaps. And I'm still not perfect. But here are the brands and approaches that actually stuck:</p>
+
+    <ul class="brand-list">
+      <li>
+        <strong>ARKET</strong> - H&M's quieter, better-made sibling. Their basics (t-shirts, knitwear, trousers) are genuinely good quality for the price. Not the cheapest, but the cost-per-wear is dramatically lower than fast fashion equivalents. A &pound;35 ARKET t-shirt that lasts 2 years beats five &pound;7 ones that last 3 months each.
+        <br><span class="brand-price">T-shirts: &pound;25-40 &middot; Knitwear: &pound;55-89</span>
+      </li>
+      <li>
+        <strong>& Other Stories</strong> - Another H&M group brand, but with noticeably better fabrics and construction. Their linen and cotton pieces hold up really well. I've had a pair of their wide-leg trousers for 18 months, worn them weekly, and they look the same as day one. The trick: buy their natural fabrics (cotton, linen, wool). Skip the polyester blends.
+        <br><span class="brand-price">Trousers: &pound;65-85 &middot; Dresses: &pound;79-120</span>
+      </li>
+      <li>
+        <strong>Charity shops (yes, really)</strong> - London charity shops are a different universe from what I grew up with in North America. In areas like Notting Hill, Hampstead, or Marylebone, you'll find barely-worn COS, Reiss, and even designer pieces for under &pound;15. My best find: a Cos wool coat for &pound;18 that retails for &pound;175. I go once a fortnight. It takes patience, but the wins are real.
+        <br><span class="brand-price">Avg spend per visit: &pound;10-25</span>
+      </li>
+      <li>
+        <strong>Uniqlo (selectively)</strong> - Not a sustainable brand, and I won't pretend otherwise. But their HeatTech base layers, Supima cotton tees, and merino knitwear are workhorses. If you're going to buy from a large retailer, buy the things Uniqlo does well and skip the trendy collaborations. I've had Uniqlo basics that outlasted "sustainable" brands twice their price.
+        <br><span class="brand-price">Basics: &pound;10-30 &middot; Knitwear: &pound;30-50</span>
+      </li>
+    </ul>
+
+    <h2>What I stopped doing</h2>
+
+    <p><strong>Browsing for fun.</strong> I used to scroll ASOS the way people scroll TikTok. Mindlessly. If I wasn't looking for something specific, I'd still end up buying something. Now I only shop when something wears out or I've identified a gap. Boring? Yes. Effective? Extremely.</p>
+
+    <p><strong>Chasing trends.</strong> Barrel-leg jeans, butter yellow, mob wife aesthetic. All fun, all temporary. I buy things that work with what I already own. My wardrobe is smaller, more repetitive, and honestly? I get ready faster and feel better in everything I put on.</p>
+
+    <p><strong>Justifying cheap prices.</strong> "It's only &pound;8" is the most expensive sentence in fast fashion. I've probably said it 500 times. Those &pound;8 purchases added up to hundreds of pounds of clothes I donated within a year.</p>
+
+    <h2>The honest maths</h2>
+
+    <p>Here's roughly what my annual clothing spend looked like, before and after:</p>
+
+    <div class="callout">
+      <div class="callout-label">The Numbers</div>
+      <div class="callout-grid">
+        <div class="callout-col">
+          <h4>Before (fast fashion default)</h4>
+          <p>~60 items/year</p>
+          <p>Avg cost: &pound;20/item</p>
+          <p>Avg lifespan: 4-6 months</p>
+          <p><strong>Annual spend: ~&pound;1,200</strong></p>
+        </div>
+        <div class="callout-col">
+          <h4>After (conscious buying)</h4>
+          <p>~15-20 items/year</p>
+          <p>Avg cost: &pound;45/item</p>
+          <p>Avg lifespan: 2-3 years</p>
+          <p><strong>Annual spend: ~&pound;750</strong></p>
+        </div>
+      </div>
+      <div class="callout-verdict">
+        <strong>The result:</strong> I spend less, own less, and like everything in my wardrobe more. The cost-per-wear on a &pound;45 jumper I wear weekly for two years is about &pound;0.43. The cost-per-wear on a &pound;12 jumper I wore six times before it pilled? &pound;2. Sustainability arguments aside, the maths just works.
+      </div>
+    </div>
+
+    <h2>What I'd tell you if we were having coffee</h2>
+
+    <p>Don't overhaul your wardrobe. Don't throw everything out and start over with a "capsule wardrobe" you saw on Pinterest. That's just more consumption wearing a different hat.</p>
+
+    <p>Instead: next time something wears out, replace it with something better. One piece at a time. That's it. That's the whole strategy.</p>
+
+    <p>You don't have to care about the environment to benefit from this. You just have to care about your wallet, your time, and actually liking the clothes you put on every morning.</p>
+
+    <p>That's what worked for me. I'll keep sharing what I find.</p>
+
+    <p style="margin-top: 36px; font-style: italic; color: #757575;">See you next Tuesday.</p>
+    <p style="font-style: italic; color: #757575;">xx KP</p>
+
+  </div>
+
+  <!-- Section divider -->
+  <div class="section-divider"><hr></div>
+
+  <!-- Author bio -->
+  <div class="author-bio">
+    <div class="author-bio-avatar">KP</div>
+    <div class="author-bio-content">
+      <div class="author-bio-name">Kristina P.</div>
+      <div class="author-bio-desc">Writing about conscious consumption through the lens of real life, real budgets, and real trade-offs. London-based, North American roots. No sponsorships, no BS.</div>
+      <button class="author-bio-subscribe">Subscribe to Kristina</button>
+    </div>
+  </div>
+
+  <!-- Section divider -->
+  <div class="section-divider"><hr></div>
+
+  <!-- Subscribe CTA -->
+  <div class="subscribe-cta">
+    <h3>Ready for more?</h3>
+    <button class="subscribe-cta-button">Subscribe</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2026 Kristina P. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Collection notice</a></p>
+    <p style="margin-top: 8px;"><a href="#">Start your Substack</a> &middot; <a href="#">Get the app</a></p>
+    <p style="margin-top: 12px; color: #bbb;">Substack is the home for great culture</p>
+  </div>
+
+</body>
+</html>

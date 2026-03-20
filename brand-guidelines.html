@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Conscious Edit - Brand Guidelines</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #fafaf8;
+      color: #242424;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Cover ── */
+    .cover {
+      background: #1a1a1a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 40px;
+      position: relative;
+    }
+    .cover-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #7ab89a;
+      margin-bottom: 40px;
+    }
+    .cover-logo {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .cover-logo em {
+      font-style: italic;
+      font-weight: 300;
+      color: #7ab89a;
+    }
+    .cover-tagline {
+      font-size: 18px;
+      font-weight: 400;
+      color: #888;
+      letter-spacing: 0.5px;
+      margin-bottom: 80px;
+    }
+    .cover-version {
+      font-size: 12px;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    /* ── Section scaffolding ── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 100px 40px;
+    }
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #2b6b4f;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .section-intro {
+      font-size: 17px;
+      color: #666;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+    .divider {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .divider hr {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    /* ── Logo section ── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+    .logo-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .logo-preview {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .logo-preview-dark { background: #1a1a1a; }
+    .logo-preview-light { background: #fff; }
+    .logo-preview-green { background: #2b6b4f; }
+    .logo-preview-cream { background: #f5f2ec; }
+    .logo-text {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .logo-text-white { color: #fff; }
+    .logo-text-dark { color: #242424; }
+    .logo-text em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    .logo-text-white em { color: #7ab89a; }
+    .logo-text-dark em { color: #2b6b4f; }
+    .logo-card-label {
+      padding: 14px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-top: 1px solid #e5e5e5;
+      background: #fafaf8;
+    }
+
+    /* ── Monogram ── */
+    .monogram-row {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    .monogram {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .monogram-dark { background: #1a1a1a; color: #fff; }
+    .monogram-green { background: #2b6b4f; color: #fff; }
+    .monogram-outline {
+      background: #fff;
+      color: #2b6b4f;
+      border: 2px solid #2b6b4f;
+    }
+    .monogram-desc {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ── Spacing rules ── */
+    .rule-block {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .rule-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 6px;
+    }
+    .rule-desc {
+      font-size: 14px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* ── Color palette ── */
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+    }
+    .swatch-color {
+      height: 120px;
+    }
+    .swatch-info {
+      padding: 14px 16px;
+      background: #fff;
+    }
+    .swatch-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 4px;
+    }
+    .swatch-values {
+      font-size: 12px;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    .color-usage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .color-usage-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 24px 28px;
+    }
+    .color-usage-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 8px;
+    }
+    .color-usage-card p {
+      font-size: 14px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* ── Typography ── */
+    .type-specimen {
+      margin-bottom: 48px;
+    }
+    .type-family-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2b6b4f;
+      margin-bottom: 20px;
+    }
+    .type-demo {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 16px;
+    }
+    .type-demo-serif {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+    .type-demo-sans {
+      font-family: 'Inter', sans-serif;
+    }
+    .type-sample-xl {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #242424;
+      margin-bottom: 20px;
+    }
+    .type-sample-lg {
+      font-size: 26px;
+      font-weight: 600;
+      color: #242424;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .type-sample-md {
+      font-size: 19px;
+      font-weight: 400;
+      color: #555;
+      line-height: 1.8;
+      max-width: 580px;
+    }
+    .type-sample-sm {
+      font-size: 14px;
+      font-weight: 500;
+      color: #777;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+    .type-weights {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .type-weight {
+      font-size: 32px;
+      color: #242424;
+    }
+    .type-weight span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .type-scale {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .type-scale-row {
+      display: flex;
+      align-items: baseline;
+      padding: 20px 28px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .type-scale-row:last-child { border-bottom: none; }
+    .type-scale-label {
+      width: 120px;
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+    }
+    .type-scale-sample {
+      flex: 1;
+      color: #242424;
+    }
+    .type-scale-specs {
+      font-size: 12px;
+      color: #bbb;
+      flex-shrink: 0;
+      text-align: right;
+      width: 180px;
+    }
+
+    /* ── Voice ── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .voice-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .voice-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #242424;
+      margin-bottom: 8px;
+    }
+    .voice-card p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .voice-do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .voice-do, .voice-dont {
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .voice-do {
+      background: #f0f7f3;
+      border: 1px solid #c8e0d3;
+    }
+    .voice-dont {
+      background: #fdf3f2;
+      border: 1px solid #e8ccc9;
+    }
+    .voice-do h4, .voice-dont h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+    .voice-do h4 { color: #2b6b4f; }
+    .voice-dont h4 { color: #b5453a; }
+    .voice-do ul, .voice-dont ul {
+      list-style: none;
+      padding: 0;
+    }
+    .voice-do li, .voice-dont li {
+      font-size: 15px;
+      color: #555;
+      padding: 6px 0;
+      line-height: 1.5;
+    }
+    .voice-do li::before {
+      content: "\2713  ";
+      color: #2b6b4f;
+      font-weight: 700;
+    }
+    .voice-dont li::before {
+      content: "\2717  ";
+      color: #b5453a;
+      font-weight: 700;
+    }
+
+    /* ── Components ── */
+    .component-demo {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 24px;
+    }
+    .component-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    /* Demo buttons */
+    .btn-primary {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      background: #2b6b4f;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-right: 12px;
+      margin-bottom: 12px;
+    }
+    .btn-secondary {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      background: transparent;
+      color: #2b6b4f;
+      border: 1.5px solid #2b6b4f;
+      padding: 11px 28px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-right: 12px;
+      margin-bottom: 12px;
+    }
+    .btn-dark {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-right: 12px;
+      margin-bottom: 12px;
+    }
+
+    /* Demo category label */
+    .demo-category {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2b6b4f;
+      margin-bottom: 16px;
+    }
+    .demo-headline {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #242424;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .demo-subtitle {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      color: #757575;
+      margin-bottom: 24px;
+    }
+    .demo-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .demo-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2b6b4f, #4a9e75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .demo-author-name { font-size: 14px; font-weight: 600; color: #242424; }
+    .demo-author-date { font-size: 13px; color: #999; }
+
+    /* Demo callout */
+    .demo-callout {
+      background: #f8f6f2;
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-top: 24px;
+    }
+    .demo-callout-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2b6b4f;
+      margin-bottom: 8px;
+    }
+    .demo-callout p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ── Photography ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .photo-placeholder {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #aaa;
+      text-align: center;
+      padding: 16px;
+      line-height: 1.4;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .cover-logo { font-size: 40px; }
+      .section-title { font-size: 28px; }
+      .logo-grid { grid-template-columns: 1fr; }
+      .voice-grid { grid-template-columns: 1fr; }
+      .voice-do-dont { grid-template-columns: 1fr; }
+      .color-usage { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr 1fr; }
+      .monogram-row { flex-direction: column; text-align: center; }
+      .type-scale-specs { display: none; }
+      .section { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ COVER ═══════════════ -->
+  <div class="cover">
+    <div class="cover-eyebrow">Brand Guidelines</div>
+    <div class="cover-logo">The Conscious <em>Edit</em></div>
+    <div class="cover-tagline">Honest reviews. Real budgets. Better choices.</div>
+    <div class="cover-version">Version 1.0 &middot; March 2026</div>
+  </div>
+
+
+  <!-- ═══════════════ 01 BRAND ESSENCE ═══════════════ -->
+  <div class="section">
+    <div class="section-number">01</div>
+    <div class="section-title">Brand Essence</div>
+    <p class="section-intro">The Conscious Edit helps women make better choices about what they consume - fashion, beauty, food - with honest reviews, real budgets, and zero gatekeeping. It's the homework you don't have time to do, from someone who actually did it.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <h4>Mission</h4>
+        <p>Make conscious consumption accessible, affordable, and honest. No guilt trips. No luxury gatekeeping. Just clear information so you can decide for yourself.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Audience</h4>
+        <p>"The Curious Pragmatist" - women in their late 20s to early 40s who want to do better but feel overwhelmed by conflicting info, limited budgets, and marketing noise.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Positioning</h4>
+        <p>Not an eco-warrior publication. Not a luxury lifestyle brand. A newsletter by a real person with a real job sharing what she's actually tried, what it actually cost, and whether it was actually worth it.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Promise</h4>
+        <p>Every product mentioned has been personally tested. Every price is listed. No affiliate links, no sponsorships, no hidden incentives. If something isn't worth it, we'll say so.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 02 LOGO ═══════════════ -->
+  <div class="section">
+    <div class="section-number">02</div>
+    <div class="section-title">Logo</div>
+    <p class="section-intro">The wordmark pairs Source Serif 4 Bold with an italic accent on "Edit" to signal editorial credibility with a personal, approachable touch.</p>
+
+    <div class="logo-grid">
+      <div class="logo-card">
+        <div class="logo-preview logo-preview-dark">
+          <div class="logo-text logo-text-white">The Conscious <em>Edit</em></div>
+        </div>
+        <div class="logo-card-label">Primary - Dark background</div>
+      </div>
+      <div class="logo-card">
+        <div class="logo-preview logo-preview-light">
+          <div class="logo-text logo-text-dark">The Conscious <em>Edit</em></div>
+        </div>
+        <div class="logo-card-label">Primary - Light background</div>
+      </div>
+      <div class="logo-card">
+        <div class="logo-preview logo-preview-green">
+          <div class="logo-text logo-text-white">The Conscious <em>Edit</em></div>
+        </div>
+        <div class="logo-card-label">On brand green</div>
+      </div>
+      <div class="logo-card">
+        <div class="logo-preview logo-preview-cream">
+          <div class="logo-text logo-text-dark">The Conscious <em>Edit</em></div>
+        </div>
+        <div class="logo-card-label">On cream / warm neutral</div>
+      </div>
+    </div>
+
+    <div class="monogram-row">
+      <div class="monogram monogram-green">CE</div>
+      <div class="monogram monogram-dark">CE</div>
+      <div class="monogram monogram-outline">CE</div>
+      <div class="monogram-desc">
+        <strong>Monogram</strong> - Use the "CE" mark for Substack profile icon, social avatars, favicons, and small-format applications. Always set in Inter 800 (Extra Bold).
+      </div>
+    </div>
+
+    <div class="rule-block">
+      <div class="rule-label">Clear space</div>
+      <div class="rule-desc">Maintain a minimum clear space around the wordmark equal to the cap height of the "T" in "The." No other elements should enter this zone.</div>
+    </div>
+    <div class="rule-block">
+      <div class="rule-label">Minimum size</div>
+      <div class="rule-desc">Wordmark: never smaller than 120px wide on screen. Monogram: never smaller than 24px. Below these sizes, legibility degrades.</div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 03 COLOUR ═══════════════ -->
+  <div class="section">
+    <div class="section-number">03</div>
+    <div class="section-title">Colour</div>
+    <p class="section-intro">A restrained, earthy palette that feels grounded and trustworthy. Green signals intention without shouting "eco." Warm neutrals keep things inviting.</p>
+
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-color" style="background: #2b6b4f;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Forest</div>
+          <div class="swatch-values">
+            #2B6B4F<br>
+            RGB 43, 107, 79<br>
+            Primary accent
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #7ab89a;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Sage</div>
+          <div class="swatch-values">
+            #7AB89A<br>
+            RGB 122, 184, 154<br>
+            Secondary / highlights
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #1a1a1a;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Ink</div>
+          <div class="swatch-values">
+            #1A1A1A<br>
+            RGB 26, 26, 26<br>
+            Headlines / body text
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #242424;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Charcoal</div>
+          <div class="swatch-values">
+            #242424<br>
+            RGB 36, 36, 36<br>
+            Body text
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #757575;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Stone</div>
+          <div class="swatch-values">
+            #757575<br>
+            RGB 117, 117, 117<br>
+            Subtitles / metadata
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #f8f6f2;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Parchment</div>
+          <div class="swatch-values">
+            #F8F6F2<br>
+            RGB 248, 246, 242<br>
+            Callout backgrounds
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #f5f2ec;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Linen</div>
+          <div class="swatch-values">
+            #F5F2EC<br>
+            RGB 245, 242, 236<br>
+            Page backgrounds (alt)
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #b5453a;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Clay</div>
+          <div class="swatch-values">
+            #B5453A<br>
+            RGB 181, 69, 58<br>
+            Warnings / concerns only
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-usage">
+      <div class="color-usage-card">
+        <h4>Primary use</h4>
+        <p>Forest green for CTAs, links, category labels, and the "CE" monogram. Never use it for large background areas - keep it as a precise accent.</p>
+      </div>
+      <div class="color-usage-card">
+        <h4>Backgrounds</h4>
+        <p>White (#fff) for article content. Parchment for callout boxes and comparison cards. Linen for alternative page backgrounds. Never use green as a page background.</p>
+      </div>
+      <div class="color-usage-card">
+        <h4>Text</h4>
+        <p>Ink for headlines. Charcoal for body copy. Stone for metadata, dates, and captions. Never use pure black (#000) - it's too harsh.</p>
+      </div>
+      <div class="color-usage-card">
+        <h4>Clay (red)</h4>
+        <p>Reserved strictly for ingredient concern flags and "don't" examples. Never use as a decorative colour or for CTAs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 04 TYPOGRAPHY ═══════════════ -->
+  <div class="section">
+    <div class="section-number">04</div>
+    <div class="section-title">Typography</div>
+    <p class="section-intro">Two typefaces. Source Serif 4 for editorial content - headlines, body copy, the wordmark. Inter for UI, labels, metadata, and CTAs.</p>
+
+    <div class="type-specimen">
+      <div class="type-family-label">Source Serif 4 - Editorial</div>
+      <div class="type-demo type-demo-serif">
+        <div class="type-sample-xl">Better choices, honest trade-offs.</div>
+        <div class="type-sample-md">A weekly newsletter for women who want to make better choices about what they consume. Fashion, beauty, food. No guilt. Just the homework you don't have time to do.</div>
+        <div class="type-weights">
+          <div class="type-weight" style="font-family: 'Source Serif 4'; font-weight: 300; font-style: italic;">Ag <span>300 Italic</span></div>
+          <div class="type-weight" style="font-family: 'Source Serif 4'; font-weight: 400;">Ag <span>400 Regular</span></div>
+          <div class="type-weight" style="font-family: 'Source Serif 4'; font-weight: 600;">Ag <span>600 Semibold</span></div>
+          <div class="type-weight" style="font-family: 'Source Serif 4'; font-weight: 700;">Ag <span>700 Bold</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-family-label">Inter - Interface</div>
+      <div class="type-demo type-demo-sans">
+        <div class="type-sample-lg">Subscribe to The Conscious Edit</div>
+        <div class="type-sample-sm">COUNTER: BEAUTY & SKINCARE &middot; APR 01, 2026 &middot; 8 MIN READ</div>
+        <div class="type-weights">
+          <div class="type-weight" style="font-family: 'Inter'; font-weight: 400;">Ag <span>400 Regular</span></div>
+          <div class="type-weight" style="font-family: 'Inter'; font-weight: 500;">Ag <span>500 Medium</span></div>
+          <div class="type-weight" style="font-family: 'Inter'; font-weight: 600;">Ag <span>600 Semibold</span></div>
+          <div class="type-weight" style="font-family: 'Inter'; font-weight: 700;">Ag <span>700 Bold</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-scale">
+      <div class="type-scale-row">
+        <div class="type-scale-label">Headline</div>
+        <div class="type-scale-sample" style="font-family: 'Source Serif 4'; font-size: 40px; font-weight: 700; line-height: 1.2;">What's in your perfume</div>
+        <div class="type-scale-specs">Source Serif 700 / 40px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">Subtitle</div>
+        <div class="type-scale-sample" style="font-family: 'Source Serif 4'; font-size: 20px; color: #757575;">The ingredients no one talks about.</div>
+        <div class="type-scale-specs">Source Serif 400 / 20px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">Section</div>
+        <div class="type-scale-sample" style="font-family: 'Source Serif 4'; font-size: 26px; font-weight: 700;">The honest trade-offs</div>
+        <div class="type-scale-specs">Source Serif 700 / 26px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">Body</div>
+        <div class="type-scale-sample" style="font-family: 'Source Serif 4'; font-size: 19px; line-height: 1.8; color: #242424;">I used to scroll ASOS the way people scroll TikTok. Mindlessly.</div>
+        <div class="type-scale-specs">Source Serif 400 / 19px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">Pull quote</div>
+        <div class="type-scale-sample" style="font-family: 'Source Serif 4'; font-size: 22px; font-weight: 600;">I wore 20% of my wardrobe 80% of the time.</div>
+        <div class="type-scale-specs">Source Serif 600 / 22px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">Category</div>
+        <div class="type-scale-sample" style="font-family: 'Inter'; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #2b6b4f;">Counter: Beauty & Skincare</div>
+        <div class="type-scale-specs">Inter 600 / 12px / UC</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">Meta</div>
+        <div class="type-scale-sample" style="font-family: 'Inter'; font-size: 13px; color: #999;">Apr 01, 2026 &middot; Kristina P.</div>
+        <div class="type-scale-specs">Inter 400 / 13px</div>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-label">CTA</div>
+        <div class="type-scale-sample" style="font-family: 'Inter'; font-size: 14px; font-weight: 600; color: #2b6b4f;">Subscribe &rarr;</div>
+        <div class="type-scale-specs">Inter 600 / 14px</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 05 VOICE & TONE ═══════════════ -->
+  <div class="section">
+    <div class="section-number">05</div>
+    <div class="section-title">Voice & Tone</div>
+    <p class="section-intro">Kristina's voice is the brand. First person, conversational, honest about trade-offs. Like texting a friend who's done the research for you.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <h4>Honest</h4>
+        <p>Always acknowledge trade-offs. If something costs more, say so. If a product didn't work, say that too. Readers trust us because we don't sugarcoat.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Personal</h4>
+        <p>First person. "I tried this." "I spent this much." Real experiences, not aggregated reviews. The newsletter IS Kristina's perspective.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Accessible</h4>
+        <p>No jargon without explanation. Always include prices. Never assume the reader has prior knowledge about sustainability, ingredients, or certifications.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Non-judgmental</h4>
+        <p>Never shame the reader for their current choices. "Here's what I found" not "here's what you should do." The reader decides.</p>
+      </div>
+    </div>
+
+    <div class="voice-do-dont">
+      <div class="voice-do">
+        <h4>Do write like this</h4>
+        <ul>
+          <li>"I've had these trousers for 18 months. They still look new."</li>
+          <li>"It costs more. Here's why I think it's worth it - or isn't."</li>
+          <li>"This is the honest trade-off: it fades faster. You'll need to reapply."</li>
+          <li>"I'm not a toxicologist. But here's what the research says."</li>
+          <li>"Your calculation might be different. That's fine."</li>
+        </ul>
+      </div>
+      <div class="voice-dont">
+        <h4>Don't write like this</h4>
+        <ul>
+          <li>"You NEED to switch to clean beauty immediately."</li>
+          <li>"This revolutionary product will transform your routine."</li>
+          <li>"Top 10 sustainable brands you'll LOVE."</li>
+          <li>"If you care about the planet, you should..."</li>
+          <li>"This game-changing, must-have essential..."</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 06 COMPONENTS ═══════════════ -->
+  <div class="section">
+    <div class="section-number">06</div>
+    <div class="section-title">Components</div>
+    <p class="section-intro">Reusable patterns for newsletter issues, social posts, and the Substack page.</p>
+
+    <div class="component-demo">
+      <div class="component-label">Buttons</div>
+      <button class="btn-primary">Subscribe</button>
+      <button class="btn-secondary">Learn more</button>
+      <button class="btn-dark">Share</button>
+    </div>
+
+    <div class="component-demo">
+      <div class="component-label">Post header</div>
+      <div class="demo-category">Counter: Beauty & Skincare</div>
+      <div class="demo-headline">What's actually in your perfume</div>
+      <div class="demo-subtitle">The ingredients no one talks about.</div>
+      <div class="demo-meta">
+        <div class="demo-avatar">KP</div>
+        <div>
+          <div class="demo-author-name">Kristina P.</div>
+          <div class="demo-author-date">Apr 01, 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="component-demo">
+      <div class="component-label">Callout box</div>
+      <div class="demo-callout">
+        <div class="demo-callout-label">The Swap</div>
+        <p>Conventional perfume lasts 8-12 hours but hides 20-40 undisclosed chemicals. Natural alternatives last 2-4 hours but list every ingredient by name. The trade-off is real. Your call.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 07 PHOTOGRAPHY ═══════════════ -->
+  <div class="section">
+    <div class="section-number">07</div>
+    <div class="section-title">Photography Direction</div>
+    <p class="section-intro">Warm, natural light. Real settings, not studios. Products as Kristina actually uses them - on a bathroom shelf, a kitchen counter, a bedside table. Imperfect and lived-in.</p>
+
+    <div class="photo-grid">
+      <div class="photo-placeholder" style="background: linear-gradient(135deg, #f0ebe3, #e2dbd0);">Flat lay: products on marble or wood surface</div>
+      <div class="photo-placeholder" style="background: linear-gradient(135deg, #e8e0d4, #d9d0c3);">Close-up: ingredient label or texture detail</div>
+      <div class="photo-placeholder" style="background: linear-gradient(160deg, #f5ede3, #e0d8cc);">Lifestyle: product in real context (shelf, bag, vanity)</div>
+    </div>
+
+    <div class="voice-do-dont" style="margin-top: 0;">
+      <div class="voice-do">
+        <h4>Photo style</h4>
+        <ul>
+          <li>Natural daylight, warm tones</li>
+          <li>Real environments (home, shop, market)</li>
+          <li>Products shown in use or context</li>
+          <li>Muted, earthy colour grading</li>
+          <li>Slightly imperfect compositions</li>
+        </ul>
+      </div>
+      <div class="voice-dont">
+        <h4>Avoid</h4>
+        <ul>
+          <li>Studio-lit product shots on white</li>
+          <li>Over-saturated or filtered images</li>
+          <li>Stock photography feel</li>
+          <li>Perfect, symmetrical flat lays</li>
+          <li>Anything that looks like an ad</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ═══════════════ 08 CONTENT PILLARS ═══════════════ -->
+  <div class="section">
+    <div class="section-number">08</div>
+    <div class="section-title">Content Pillars</div>
+    <p class="section-intro">Four pillars structure all content. Each has a category label colour-coded with Forest green. Pillars rotate weekly in the Tuesday Drop.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <h4>Closet</h4>
+        <p>Fashion & wardrobe. Sustainable brands, capsule wardrobes, fast fashion alternatives, charity shop finds, cost-per-wear analysis.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Counter</h4>
+        <p>Beauty & skincare. Ingredient breakdowns, clean swaps, label decoding, product reviews with full transparency on what's inside.</p>
+      </div>
+      <div class="voice-card">
+        <h4>Cart</h4>
+        <p>Food & consumption. Healthy eating, meal planning, label reading, seasonal shopping, understanding what "natural" actually means.</p>
+      </div>
+      <div class="voice-card">
+        <h4>The Swap</h4>
+        <p>Recurring comparison format. One mainstream product vs. one conscious alternative. Honest on price, quality, trade-offs. No winner declared - reader decides.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="section" style="text-align: center; padding-bottom: 80px;">
+    <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 28px; font-weight: 700; margin-bottom: 8px;">The Conscious <em style="font-weight: 300; color: #2b6b4f;">Edit</em></div>
+    <div style="font-size: 13px; color: #999;">Brand Guidelines v1.0 &middot; March 2026 &middot; Prepared by Matilda for Kristina</div>
+  </div>
+
+</body>
+</html>
