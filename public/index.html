@@ -452,7 +452,9 @@
       font-size: 12px;
       font-weight: 700;
       color: #fff;
+      transition: background 0.2s;
     }
+    .phase.phase-complete .phase-dot { background: #999; }
     .phase-header {
       display: flex;
       align-items: baseline;
@@ -468,6 +470,12 @@
     .phase-period {
       font-size: 13px;
       color: #999;
+    }
+    .phase-progress {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2b6b4f;
+      margin-left: auto;
     }
     .phase-tagline {
       font-size: 15px;
@@ -497,15 +505,79 @@
       margin-bottom: 8px;
     }
     .phase-block ul {
-      padding-left: 18px;
+      list-style: none;
+      padding-left: 0;
     }
     .phase-block li {
       font-size: 14px;
       color: #555;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.1s;
     }
+    .phase-block li:hover { background: #fafaf8; }
     .phase-block li strong { color: #242424; }
+    .phase-block li.checked {
+      color: #bbb;
+      text-decoration: line-through;
+    }
+    .phase-block li.checked strong {
+      color: #bbb;
+    }
+
+    /* Checkbox */
+    .check-box {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .check-box svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    li.checked .check-box {
+      background: #2b6b4f;
+      border-color: #2b6b4f;
+    }
+    li.checked .check-box svg { opacity: 1; }
+
+    /* Progress bar */
+    .phase-progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #f0f0f0;
+      border-radius: 2px;
+      margin: 12px 0 16px;
+      overflow: hidden;
+    }
+    .phase-progress-fill {
+      height: 100%;
+      background: #2b6b4f;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
     .phase-milestone {
       margin-top: 16px;
       padding-top: 16px;
@@ -910,127 +982,174 @@
     <div class="section">
       <div class="section-number">05</div>
       <div class="section-title">6-Month Growth Strategy</div>
+      <p style="font-size: 14px; color: #999; margin-bottom: 32px;">Click items to mark them done. Progress saves automatically in your browser.</p>
 
-      <div class="phase">
+      <div class="phase" data-phase="1">
         <div class="phase-dot">1</div>
         <div class="phase-header">
           <div class="phase-title">Foundation</div>
           <div class="phase-period">Month 1-2</div>
+          <div class="phase-progress"><span class="phase-count">0</span> / <span class="phase-total">14</span></div>
         </div>
+        <div class="phase-progress-bar"><div class="phase-progress-fill" style="width: 0%"></div></div>
         <div class="phase-tagline">"Build the engine"</div>
         <div class="phase-goal">Goal: 200 subscribers, 10 posts, voice established</div>
 
         <div class="phase-block">
           <div class="phase-block-label">Content</div>
           <ul>
-            <li>Publish 4 posts before announcing publicly (backlog creates credibility)</li>
-            <li>Week 1-2: Write and schedule first 4 posts across all pillars</li>
-            <li>Week 3: Soft launch to friends/family (50-100 people)</li>
-            <li>Week 4: Public launch with LinkedIn post</li>
-            <li>Month 2: Settle into weekly Tuesday cadence</li>
+            <li data-id="1-1"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Publish 4 posts before announcing publicly (backlog creates credibility)</span></li>
+            <li data-id="1-2"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Week 1-2: Write and schedule first 4 posts across all pillars</span></li>
+            <li data-id="1-3"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Week 3: Soft launch to friends/family (50-100 people)</span></li>
+            <li data-id="1-4"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Week 4: Public launch with LinkedIn post</span></li>
+            <li data-id="1-5"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Month 2: Settle into weekly Tuesday cadence</span></li>
           </ul>
         </div>
 
         <div class="phase-block">
           <div class="phase-block-label">Growth Tactics</div>
           <ul>
-            <li>Personal outreach: Kristina DMs 10 people/day from her network</li>
-            <li><strong>LinkedIn:</strong> 2x/week short posts that tease newsletter content</li>
-            <li><strong>Instagram:</strong> 3 posts/week (carousel tips, behind-the-scenes)</li>
-            <li>Cross-post on Substack Notes daily</li>
-            <li>Add Substack link to all social bios, email signature</li>
+            <li data-id="1-6"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Personal outreach: Kristina DMs 10 people/day from her network</span></li>
+            <li data-id="1-7"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>LinkedIn:</strong> 2x/week short posts that tease newsletter content</span></li>
+            <li data-id="1-8"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Instagram:</strong> 3 posts/week (carousel tips, behind-the-scenes)</span></li>
+            <li data-id="1-9"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Cross-post on Substack Notes daily</span></li>
+            <li data-id="1-10"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Add Substack link to all social bios, email signature</span></li>
           </ul>
         </div>
 
         <div class="phase-block">
           <div class="phase-block-label">Ops Setup</div>
           <ul>
-            <li>Substack profile with professional headshot and compelling "About" page</li>
-            <li>Choose 3-5 Substack categories/tags for discoverability</li>
-            <li>Canva template for newsletter header + social posts</li>
-            <li>Content calendar (Google Sheet or Notion)</li>
+            <li data-id="1-11"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Substack profile with professional headshot and compelling "About" page</span></li>
+            <li data-id="1-12"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Choose 3-5 Substack categories/tags for discoverability</span></li>
+            <li data-id="1-13"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Canva template for newsletter header + social posts</span></li>
+            <li data-id="1-14"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Content calendar (Google Sheet or Notion)</span></li>
           </ul>
         </div>
 
         <div class="phase-milestone">Milestone: 200 subscribers by end of Month 2</div>
       </div>
 
-      <div class="phase">
+      <div class="phase" data-phase="2">
         <div class="phase-dot">2</div>
         <div class="phase-header">
           <div class="phase-title">Community</div>
           <div class="phase-period">Month 3-4</div>
+          <div class="phase-progress"><span class="phase-count">0</span> / <span class="phase-total">10</span></div>
         </div>
+        <div class="phase-progress-bar"><div class="phase-progress-fill" style="width: 0%"></div></div>
         <div class="phase-tagline">"Find your people"</div>
         <div class="phase-goal">Goal: 500 subscribers, engaged comments, first collaborations</div>
 
         <div class="phase-block">
           <div class="phase-block-label">Content Evolution</div>
           <ul>
-            <li>Introduce "The Swap" as a recurring bi-weekly segment</li>
-            <li>Start "Label Decoder" monthly series</li>
-            <li>First reader Q&A post</li>
-            <li>One "deep dive" long-form post per month</li>
+            <li data-id="2-1"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Introduce "The Swap" as a recurring bi-weekly segment</span></li>
+            <li data-id="2-2"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Start "Label Decoder" monthly series</span></li>
+            <li data-id="2-3"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>First reader Q&A post</span></li>
+            <li data-id="2-4"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>One "deep dive" long-form post per month</span></li>
           </ul>
         </div>
 
         <div class="phase-block">
           <div class="phase-block-label">Growth Tactics</div>
           <ul>
-            <li><strong>Substack recommendations:</strong> Reach out to 10-15 complementary writers for mutual recs</li>
-            <li><strong>Guest features:</strong> 1-2 sustainable brand founders for Q&A posts</li>
-            <li><strong>LinkedIn:</strong> Increase to 3x/week, engage in comments on related creators</li>
-            <li><strong>Instagram Reels:</strong> 1x/week short video comparisons</li>
-            <li><strong>Referral program:</strong> Substack's built-in referral (3 friends = shoutout)</li>
-            <li><strong>Engagement:</strong> Reply to every comment. Ask questions. Feature reader responses.</li>
+            <li data-id="2-5"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Substack recommendations:</strong> Reach out to 10-15 complementary writers for mutual recs</span></li>
+            <li data-id="2-6"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Guest features:</strong> 1-2 sustainable brand founders for Q&A posts</span></li>
+            <li data-id="2-7"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>LinkedIn:</strong> Increase to 3x/week, engage in comments on related creators</span></li>
+            <li data-id="2-8"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Instagram Reels:</strong> 1x/week short video comparisons</span></li>
+            <li data-id="2-9"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Referral program:</strong> Substack's built-in referral (3 friends = shoutout)</span></li>
+            <li data-id="2-10"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Engagement:</strong> Reply to every comment. Ask questions. Feature reader responses.</span></li>
           </ul>
         </div>
 
         <div class="phase-milestone">Milestone: 500 subscribers, 15%+ open rate, 5+ comments/post</div>
       </div>
 
-      <div class="phase">
+      <div class="phase" data-phase="3">
         <div class="phase-dot">3</div>
         <div class="phase-header">
           <div class="phase-title">Authority</div>
           <div class="phase-period">Month 5-6</div>
+          <div class="phase-progress"><span class="phase-count">0</span> / <span class="phase-total">12</span></div>
         </div>
+        <div class="phase-progress-bar"><div class="phase-progress-fill" style="width: 0%"></div></div>
         <div class="phase-tagline">"Become the go-to"</div>
         <div class="phase-goal">Goal: 1,000+ subscribers, monetization foundations</div>
 
         <div class="phase-block">
           <div class="phase-block-label">Content Evolution</div>
           <ul>
-            <li>Publish a "Best of" comprehensive guide (high shareability)</li>
-            <li>Seasonal content: "Spring Capsule Wardrobe: 15 Pieces, Under &pound;500"</li>
-            <li>Start tagging/reviewing brands - some will reshare, driving organic reach</li>
-            <li>One "controversial take" post to spark conversation</li>
+            <li data-id="3-1"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Publish a "Best of" comprehensive guide (high shareability)</span></li>
+            <li data-id="3-2"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Seasonal content: "Spring Capsule Wardrobe: 15 Pieces, Under &pound;500"</span></li>
+            <li data-id="3-3"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Start tagging/reviewing brands - some will reshare, driving organic reach</span></li>
+            <li data-id="3-4"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>One "controversial take" post to spark conversation</span></li>
           </ul>
         </div>
 
         <div class="phase-block">
           <div class="phase-block-label">Growth Tactics</div>
           <ul>
-            <li><strong>Podcast guesting:</strong> Pitch 3-5 podcasts in conscious living/wellness space</li>
-            <li><strong>Substack leaderboard:</strong> Coordinate a "recommend me" week with writer network</li>
-            <li><strong>Welcome sequence:</strong> 3 automated emails for new subscribers</li>
-            <li><strong>SEO:</strong> Optimize post titles for search (Substack posts rank well)</li>
+            <li data-id="3-5"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Podcast guesting:</strong> Pitch 3-5 podcasts in conscious living/wellness space</span></li>
+            <li data-id="3-6"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Substack leaderboard:</strong> Coordinate a "recommend me" week with writer network</span></li>
+            <li data-id="3-7"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>Welcome sequence:</strong> 3 automated emails for new subscribers</span></li>
+            <li data-id="3-8"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span><strong>SEO:</strong> Optimize post titles for search (Substack posts rank well)</span></li>
           </ul>
         </div>
 
         <div class="phase-block">
           <div class="phase-block-label">Monetization Prep</div>
           <ul>
-            <li>Survey readers: "Would you pay &pound;5/month for premium content?"</li>
-            <li>Test one premium post behind paywall to gauge conversion</li>
-            <li>Explore affiliate partnerships ONLY with personally-used brands</li>
-            <li>Build a "brand partnership" one-pager (editorial control, honest reviews only)</li>
+            <li data-id="3-9"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Survey readers: "Would you pay &pound;5/month for premium content?"</span></li>
+            <li data-id="3-10"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Test one premium post behind paywall to gauge conversion</span></li>
+            <li data-id="3-11"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Explore affiliate partnerships ONLY with personally-used brands</span></li>
+            <li data-id="3-12"><div class="check-box"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><span>Build a "brand partnership" one-pager (editorial control, honest reviews only)</span></li>
           </ul>
         </div>
 
         <div class="phase-milestone">Milestone: 1,000 subscribers, 20%+ open rate, monetization plan validated</div>
       </div>
     </div>
+
+    <script>
+    (function() {
+      const STORAGE_KEY = 'tce-checklist';
+      let state = {};
+      try { state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch(e) {}
+
+      // Restore state
+      document.querySelectorAll('.phase-block li[data-id]').forEach(li => {
+        if (state[li.dataset.id]) li.classList.add('checked');
+        li.addEventListener('click', () => {
+          li.classList.toggle('checked');
+          state[li.dataset.id] = li.classList.contains('checked');
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+          updateProgress();
+        });
+      });
+
+      function updateProgress() {
+        document.querySelectorAll('.phase[data-phase]').forEach(phase => {
+          const items = phase.querySelectorAll('li[data-id]');
+          const checked = phase.querySelectorAll('li.checked').length;
+          const total = items.length;
+          const pct = total ? Math.round((checked / total) * 100) : 0;
+
+          phase.querySelector('.phase-count').textContent = checked;
+          phase.querySelector('.phase-total').textContent = total;
+          phase.querySelector('.phase-progress-fill').style.width = pct + '%';
+
+          if (checked === total && total > 0) {
+            phase.classList.add('phase-complete');
+          } else {
+            phase.classList.remove('phase-complete');
+          }
+        });
+      }
+
+      updateProgress();
+    })();
+    </script>
 
     <!-- ═══ 06 Content Calendar ═══ -->
     <div class="section">
